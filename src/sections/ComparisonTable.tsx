@@ -325,7 +325,7 @@ export default function ComparisonTable() {
       id="compare"
       className="bg-ice-wash/30 py-20 border-y border-hairline-slate"
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
           <h2 className="font-headline text-[32px] font-bold text-midnight-slate mb-4">
             Top Rated Security Providers
@@ -341,18 +341,18 @@ export default function ComparisonTable() {
           {visibleVPNs.map((vpn) => (
             <div
               key={vpn.name}
-              className={`bg-pure-white border border-hairline-slate rounded-card p-6 shadow-subtle flex flex-col xl:flex-row gap-8 items-center transition-all duration-300 hover:border-cool-gray/40 hover:shadow-floating ${
+              className={`bg-pure-white border border-hairline-slate rounded-card p-4 sm:p-6 shadow-subtle flex flex-col xl:flex-row gap-6 xl:gap-8 items-center transition-all duration-300 hover:border-cool-gray/40 hover:shadow-floating ${
                 vpn.rank === 1 ? "" : "opacity-95"
               }`}
             >
               {/* Left Column: Rank, Logo, Brand Name & Badge */}
-              <div className="flex items-center gap-6 w-full xl:w-1/4 select-none">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-midnight-slate flex items-center justify-center text-pure-white font-mono text-xl md:text-2xl font-bold border-4 border-hairline-slate">
+              <div className="flex items-center gap-4 sm:gap-6 w-full xl:w-1/4 select-none">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-midnight-slate flex items-center justify-center text-pure-white font-mono text-lg md:text-2xl font-bold border-2 md:border-4 border-hairline-slate">
                   {vpn.rank}
                 </div>
                 <div className="flex flex-col gap-1">
                   <div
-                    className="w-28 h-8 bg-contain bg-no-repeat bg-left"
+                    className="w-24 h-7 md:w-28 md:h-8 bg-contain bg-no-repeat bg-left"
                     style={{ backgroundImage: `url('${vpn.logoUrl}')` }}
                     title={vpn.name}
                   ></div>
@@ -375,7 +375,7 @@ export default function ComparisonTable() {
 
               {/* Center Column: Ratings & Sub-metrics */}
               <div className="flex flex-col gap-4 flex-grow w-full xl:w-2/4">
-                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 sm:gap-y-4">
                   <div>
                     <div className="flex justify-between text-[10px] mb-1 font-semibold text-cool-gray">
                       <span>SPEED</span>
@@ -427,7 +427,7 @@ export default function ComparisonTable() {
                 </div>
 
                 {/* Capability Badges */}
-                <div className="flex flex-wrap gap-3 pt-2">
+                <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
                   {vpn.capabilities.map((cap) => (
                     <div
                       key={cap.label}
@@ -491,7 +491,7 @@ export default function ComparisonTable() {
                 </div>
                 <Button 
                   onClick={() => handleGetDeal(vpn)} 
-                  className="w-full sm:w-auto active:scale-[0.97] whitespace-nowrap"
+                  className="w-auto active:scale-[0.97] whitespace-nowrap"
                 >
                   Get Deal
                 </Button>
@@ -538,7 +538,7 @@ export default function ComparisonTable() {
           ></div>
           
           {/* Modal Container */}
-          <div className="bg-pure-white border border-hairline-slate rounded-card shadow-floating max-w-md w-full overflow-hidden relative p-8 flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-200 z-10">
+          <div className="bg-pure-white border border-hairline-slate rounded-card shadow-floating max-w-md w-full max-h-[calc(100vh-2rem)] overflow-y-auto relative p-5 sm:p-8 flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-200 z-10">
             {/* Close Button */}
             <button
               onClick={() => setActiveDeal(null)}
@@ -562,26 +562,26 @@ export default function ComparisonTable() {
             </button>
 
             {/* Discount Stamp */}
-            <div className="w-24 h-24 rounded-full bg-electric-cobalt/5 border border-electric-cobalt/25 flex flex-col items-center justify-center mb-6 shadow-inner select-none animate-pulse">
-              <span className="font-mono text-3xl font-extrabold text-electric-cobalt">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-electric-cobalt/5 border border-electric-cobalt/25 flex flex-col items-center justify-center mb-4 sm:mb-6 shadow-inner select-none animate-pulse">
+              <span className="font-mono text-2xl sm:text-3xl font-extrabold text-electric-cobalt">
                 {activeDeal.discount}%
               </span>
-              <span className="text-[10px] font-mono font-bold text-electric-cobalt/80 tracking-widest uppercase">
+              <span className="text-[9px] sm:text-[10px] font-mono font-bold text-electric-cobalt/80 tracking-widest uppercase">
                 OFF
               </span>
             </div>
 
             {/* Title & Brand */}
-            <h3 className="font-headline text-2xl font-bold text-midnight-slate mb-2">
+            <h3 className="font-headline text-xl sm:text-2xl font-bold text-midnight-slate mb-1 sm:mb-2">
               Exclusive Deal Unlocked!
             </h3>
-            <p className="font-body text-sm text-cool-gray max-w-sm mb-6">
+            <p className="font-body text-xs sm:text-sm text-cool-gray max-w-sm mb-4 sm:mb-6">
               You have successfully claimed a special coupon for{" "}
               <strong className="text-midnight-slate">{activeDeal.vpnName}</strong>.
             </p>
 
             {/* Brand Logo & Name Area */}
-            <div className="flex items-center gap-3 bg-frost-canvas border border-hairline-slate px-4 py-2.5 rounded-inner mb-6">
+            <div className="flex items-center gap-3 bg-frost-canvas border border-hairline-slate px-4 py-2 sm:py-2.5 rounded-inner mb-4 sm:mb-6">
               <div
                 className="w-24 h-6 bg-contain bg-no-repeat bg-center"
                 style={{ backgroundImage: `url('${activeDeal.logoUrl}')` }}
@@ -590,12 +590,12 @@ export default function ComparisonTable() {
             </div>
 
             {/* Coupon Code Block */}
-            <div className="w-full bg-ice-wash/30 border border-dashed border-electric-cobalt/30 rounded-inner p-4 mb-6 flex items-center justify-between group hover:border-electric-cobalt/50 transition-colors">
-              <div className="flex flex-col text-left">
+            <div className="w-full bg-ice-wash/30 border border-dashed border-electric-cobalt/30 rounded-inner p-3 sm:p-4 mb-4 sm:mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 group hover:border-electric-cobalt/50 transition-colors">
+              <div className="flex flex-col text-center sm:text-left w-full sm:w-auto">
                 <span className="text-[10px] font-mono text-cool-gray font-bold uppercase tracking-wider">
                   COUPON CODE
                 </span>
-                <span className="font-mono font-extrabold text-lg text-electric-cobalt tracking-wider select-all mt-0.5">
+                <span className="font-mono font-extrabold text-base sm:text-lg text-electric-cobalt tracking-wider select-all mt-0.5 break-all">
                   {activeDeal.couponCode}
                 </span>
               </div>
@@ -605,7 +605,7 @@ export default function ComparisonTable() {
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
-                className="text-xs font-semibold text-electric-cobalt hover:text-electric-cobalt/80 px-2.5 py-1.5 rounded-inner bg-pure-white border border-hairline-slate shadow-subtle cursor-pointer active:scale-95 transition-all"
+                className="w-full sm:w-auto text-xs font-semibold text-electric-cobalt hover:text-electric-cobalt/80 px-4 py-2 sm:px-2.5 sm:py-1.5 rounded-inner bg-pure-white border border-hairline-slate shadow-subtle cursor-pointer active:scale-95 transition-all text-center"
               >
                 {copied ? "Copied!" : "Copy"}
               </button>

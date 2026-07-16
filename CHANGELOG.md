@@ -27,6 +27,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sửa ComparisonTable modal overlay dùng `bg-black/60` thay vì `bg-midnight-slate/60` để hoạt động đúng ở cả 2 themes.
 - Đổi `hover:border-slate-300` thành `hover:border-cool-gray/40` trong VPN comparison cards.
 
+### Fixed
+- Sửa lỗi vỡ và tràn bố cục (layout breaking) trên di động cho bảng so sánh `ComparisonTable.tsx`:
+  - Giảm padding ngoài cùng từ `px-8` thành `px-4 md:px-8` và padding trong card từ `p-6` thành `p-4 sm:p-6` để tăng diện tích hiển thị trên màn hình nhỏ.
+  - Chuyển đổi hệ thống lưới hiển thị 4 thông số (speed, privacy, security, unblocking) từ 2 cột tĩnh thành 1 cột trên mobile và 2 cột trên tablet/desktop (`grid-cols-1 sm:grid-cols-2`) để tránh đè chữ.
+  - Đổi chiều rộng nút "Get Deal" từ `w-full sm:w-auto` thành `w-auto` trên mobile để nằm cân đối trong hàng flex-row chứa giá tiền mà không đẩy lùi phần tử khác.
+  - Thu nhỏ Rank Badge (vòng tròn số thứ tự) thành `w-10 h-10` và Logo ảnh thành `w-24` trên màn hình di động để tiết kiệm không gian.
+  - Khắc phục lỗi tràn văn bản của mã coupon dài trong Exclusive Deal Modal bằng cách chuyển sang dạng xếp chồng dọc (`flex-col`) trên di động và thêm thuộc tính `break-all` cho coupon code text.
+
 ## [1.0.5] - 2026-07-16
 
 ### Fixed

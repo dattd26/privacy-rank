@@ -128,11 +128,13 @@ Used for numeric values, speed rates, ping stats, server counts, and rank number
 
 ### VPN Comparison Card
 *   **Role**: Row blocks listing each VPN in the main ranking.
-*   **Details**: White (#ffffff) surface, 16px radius, 1px Hairline Slate (#e2e8f0) border, internal padding 24px. Shadow is `--shadow-subtle`.
+*   **Details**: White (#ffffff) surface, 16px radius, 1px Hairline Slate (#e2e8f0) border, internal padding 24px (`p-6`) on desktop scaling down to 16px (`p-4`) on mobile. Shadow is `--shadow-subtle`.
     *   **Structure**:
-        *   Left: Rank index (large JetBrains Mono '#090d16' in Circle) + Provider Logo + "Overall Score" badge (e.g., `9.8` in green circle).
-        *   Center: Key features list (Inter 14px, checked bullets) + Pros list (Jade wash, Cyber Jade text) + Cons list (Crimson wash, Signal Crimson text).
-        *   Right: Price highlight (JetBrains Mono '$2.99/mo') + "Get NordVPN - Save 74%" (Primary CTA) + "Read Review" (Secondary CTA).
+        *   Left: Rank index (large JetBrains Mono '#090d16' in Circle, `w-16 h-16` on desktop/tablet, `w-10 h-10` on mobile) + Provider Logo (`w-28` on desktop, `w-24` on mobile) + "Overall Score" badge (e.g., `9.8` in green circle).
+        *   Center: Key features list (Inter 14px, checked bullets) + Pros/Cons capabilities lists. Sub-metrics display as a 2-column grid on desktop/tablet but stack to a 1-column grid on mobile to prevent layout compression.
+        *   Right: Price highlight (JetBrains Mono '$2.99/mo') + "Get Deal" (Primary CTA, auto-width `w-auto` to fit inline alongside pricing on mobile viewports).
+*   **Exclusive Deal Modal**: Responsive popup to display exclusive discount stamp and copyable coupon codes. Stacks the coupon block vertically (`flex-col`) on mobile to accommodate longer codes (e.g. `PRIVATEINTERNETACCESS70`) without text overflow, shifting to horizontal flow (`flex-row`) on tablet and desktop viewports.
+
 
 ### Bento Grid Cell
 *   **Role**: Unique blocks inside the security features layout.
