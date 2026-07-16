@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "../components/Button";
 import ThemeToggle from "../components/ThemeToggle";
 import { gsap } from "gsap";
@@ -11,6 +13,8 @@ gsap.registerPlugin(useGSAP);
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,36 +84,44 @@ export default function Header() {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a
-            className="text-electric-cobalt font-semibold border-b-2 border-electric-cobalt pb-1 font-body text-sm"
-            href="#"
+          <Link
+            className={`${
+              pathname === "/"
+                ? "text-electric-cobalt font-semibold border-b-2 border-electric-cobalt"
+                : "text-midnight-slate hover:text-electric-cobalt border-b-2 border-transparent hover:border-electric-cobalt/30 font-medium"
+            } pb-1 font-body text-sm transition-all duration-200`}
+            href="/"
           >
             Home
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#compare"
+          </Link>
+          <Link
+            className={`${
+              pathname.startsWith("/reviews")
+                ? "text-electric-cobalt font-semibold border-b-2 border-electric-cobalt"
+                : "text-midnight-slate hover:text-electric-cobalt border-b-2 border-transparent hover:border-electric-cobalt/30 font-medium"
+            } pb-1 font-body text-sm transition-all duration-200`}
+            href="/reviews"
           >
             VPN Reviews
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#features"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt border-b-2 border-transparent hover:border-electric-cobalt/30 pb-1 font-body text-sm font-medium transition-all duration-200"
+            href="/#features"
           >
             Best VPNs
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#faq"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt border-b-2 border-transparent hover:border-electric-cobalt/30 pb-1 font-body text-sm font-medium transition-all duration-200"
+            href="/#faq"
           >
             Guides
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#footer"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt border-b-2 border-transparent hover:border-electric-cobalt/30 pb-1 font-body text-sm font-medium transition-all duration-200"
+            href="/#footer"
           >
             About Us
-          </a>
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -157,41 +169,49 @@ export default function Header() {
       {/* Mobile Drawer */}
       {isOpen && (
         <div className="absolute top-[100%] left-0 w-full bg-pure-white border-b border-hairline-slate shadow-floating z-40 p-6 flex flex-col gap-4 md:hidden">
-          <a
-            className="text-electric-cobalt font-semibold font-body text-sm"
-            href="#"
+          <Link
+            className={`${
+              pathname === "/"
+                ? "text-electric-cobalt font-semibold"
+                : "text-midnight-slate hover:text-electric-cobalt font-medium"
+            } font-body text-sm transition-colors duration-200`}
+            href="/"
             onClick={() => setIsOpen(false)}
           >
             Home
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#compare"
+          </Link>
+          <Link
+            className={`${
+              pathname.startsWith("/reviews")
+                ? "text-electric-cobalt font-semibold"
+                : "text-midnight-slate hover:text-electric-cobalt font-medium"
+            } font-body text-sm transition-colors duration-200`}
+            href="/reviews"
             onClick={() => setIsOpen(false)}
           >
             VPN Reviews
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#features"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt font-body text-sm font-medium transition-colors duration-200"
+            href="/#features"
             onClick={() => setIsOpen(false)}
           >
             Best VPNs
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#faq"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt font-body text-sm font-medium transition-colors duration-200"
+            href="/#faq"
             onClick={() => setIsOpen(false)}
           >
             Guides
-          </a>
-          <a
-            className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
-            href="#footer"
+          </Link>
+          <Link
+            className="text-midnight-slate hover:text-electric-cobalt font-body text-sm font-medium transition-colors duration-200"
+            href="/#footer"
             onClick={() => setIsOpen(false)}
           >
             About Us
-          </a>
+          </Link>
           <Button
             variant="outline"
             className="w-full text-center"

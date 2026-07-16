@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.0] - 2026-07-17
+
+### Added
+- Tạo route mới `/reviews` hiển thị danh sách các VPN đánh giá, tích hợp Breadcrumbs điều hướng, bộ lọc hệ điều hành trực quan (All, Windows, Mac, Android, iOS), thông tin tóm tắt và nút mở Deal Modal lấy ưu đãi.
+- Tạo route động `/reviews/[slug]` hỗ trợ hiển thị bài đánh giá chuyên sâu. Viết nội dung đánh giá chi tiết chuẩn chuyên gia (American English) cho NordVPN bao gồm: Quick Verdict, Pros & Cons trực quan hóa bằng màu Jade/Crimson, thanh tiến trình rating các hạng mục (Speed, Security, v.v.), bảng thông số kỹ thuật đầy đủ và FAQ Accordion tương tác.
+- Tạo component `Breadcrumbs` (`src/components/Breadcrumbs.tsx`) hỗ trợ điều hướng phân cấp giữa các trang con để tránh người dùng bị rơi vào ngõ cụt.
+- Tích hợp Table of Contents (mục lục) động trong sidebar của trang chi tiết bài viết, tự động theo dõi và đánh dấu phần đang đọc khi cuộn trang nhờ hook `IntersectionObserver`.
+- Tích hợp Deal Modal nhận Coupon độc quyền trong cả trang danh sách và trang chi tiết bài viết tương tự trang chủ nhằm duy trì trải nghiệm liền mạch và tối ưu hóa tỷ lệ chuyển đổi.
+- Thêm giao diện "Under Audit / Detailed Review Coming Soon" thiết kế cao cấp cho các VPN khác trong danh sách (Surfshark, ExpressVPN) khi người dùng truy cập trang chi tiết của chúng.
+
+### Changed
+- Tái cấu trúc cấu trúc Next.js App Router bằng cách di chuyển `Header` và `Footer` vào `RootLayout` (`src/app/layout.tsx`) để dùng chung cho tất cả các trang.
+- Cập nhật `Header.tsx` sử dụng Next.js `Link` và hook `usePathname` để tự động bôi màu active tương ứng cho link "Home" hoặc "VPN Reviews".
+- Chuyển các anchor link nội bộ trên Header sang dạng `/ #features`, `/ #faq`, v.v. để tự động chuyển về trang chủ và cuộn đến đúng phần khi người dùng click từ trang con.
+- Cập nhật `PROJECT_CONTEXT.md` mô tả cấu trúc đa trang mới.
+
 ## [1.1.0] - 2026-07-16
 
 ### Added

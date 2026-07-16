@@ -6,16 +6,18 @@ This project is a UI/UX test submission for the **Fullstack Intern** position at
 
 ## 1. Project Objective
 
-The goal is to design and develop a premium, highly-converting, and responsive homepage for **"PrivacyRank"** (originally "Top VPN Services 2026") aimed at a global audience. The content is written entirely in English, following cybersecurity review website standards (similar to Cybernews, SafetyDetectives, and the visual references of NEVERHACK & ExpressVPN).
+The goal is to design and develop a premium, highly-converting, and responsive multi-page web application for **"PrivacyRank"** aimed at a global audience. The project features a structured homepage comparing top VPN networks, a dedicated reviews repository (`/reviews`), and detailed individual review pages (such as `/reviews/nordvpn`). The content is written entirely in English, following cybersecurity review website standards (similar to Cybernews, SafetyDetectives, and the visual references of NEVERHACK & ExpressVPN).
 
 ---
 
 ## 2. Technical Stack
 
 *   **Core**: Next.js 16 (App Router), React 19.
+*   **Routing**: Dynamic multi-page routes using App Router (`/reviews` & `/reviews/[slug]`).
 *   **Styling**: Tailwind CSS v4, Custom CSS, and Modern Google Fonts (Plus Jakarta Sans, Inter, JetBrains Mono).
 *   **Animations**: GSAP & `@gsap/react` for high-performance timeline-based animations and page transitions.
 *   **Icons**: Phosphor Icons (`@phosphor-icons/react`).
+
 
 ---
 

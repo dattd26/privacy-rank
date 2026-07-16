@@ -328,12 +328,10 @@ export default function ComparisonTable() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
           <h2 className="font-headline text-[32px] font-bold text-midnight-slate mb-4">
-            Top Rated Security Providers
+            Top Rated VPN Services
           </h2>
           <p className="font-body text-cool-gray max-w-2xl mx-auto">
-            Our rigorous lab testing identifies the highest performing networks
-            based on privacy engineering, speed overhead, and jurisdictional
-            safety.
+            Compare the best VPNs based on independent testing, privacy standards, connection speed, streaming performance, pricing, and overall value.
           </p>
         </div>
 

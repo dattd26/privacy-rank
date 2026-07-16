@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "../components/ThemeProvider";
+import Header from "../sections/Header";
+import Footer from "../sections/Footer";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -59,9 +61,14 @@ export default function RootLayout({
       </head>
       <body className="bg-frost-canvas text-midnight-slate min-h-full flex flex-col font-body antialiased">
         <ThemeProvider>
-          {children}
+          <Header />
+          <main className="pt-[72px] flex-grow flex flex-col">
+            {children}
+          </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
   );
 }
+
