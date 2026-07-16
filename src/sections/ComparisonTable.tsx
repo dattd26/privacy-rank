@@ -341,7 +341,7 @@ export default function ComparisonTable() {
           {visibleVPNs.map((vpn) => (
             <div
               key={vpn.name}
-              className={`bg-pure-white border border-hairline-slate rounded-card p-6 shadow-subtle flex flex-col xl:flex-row gap-8 items-center transition-all duration-300 hover:border-slate-300 hover:shadow-floating ${
+              className={`bg-pure-white border border-hairline-slate rounded-card p-6 shadow-subtle flex flex-col xl:flex-row gap-8 items-center transition-all duration-300 hover:border-cool-gray/40 hover:shadow-floating ${
                 vpn.rank === 1 ? "" : "opacity-95"
               }`}
             >
@@ -530,7 +530,7 @@ export default function ComparisonTable() {
 
       {/* Premium Deal Modal/Popup */}
       {activeDeal && (
-        <div className="fixed inset-0 bg-midnight-slate/60 backdrop-blur-md z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-4">
           {/* Modal Overlay Close Handler */}
           <div 
             className="absolute inset-0 cursor-default" 

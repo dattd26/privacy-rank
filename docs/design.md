@@ -263,3 +263,46 @@ Used for numeric values, speed rates, ping stats, server counts, and rank number
   --shadow-floating: rgba(15, 23, 42, 0.08) 0px 12px 32px -8px, rgba(0, 0, 0, 0.03) 0px 4px 8px -2px;
 }
 ```
+
+---
+
+## Dark Mode Palette
+
+PrivacyRank supports both Light and Dark themes via CSS custom property overrides on `html.dark`. The strategy overrides physical token values rather than adding separate utility classes, so **all components automatically adapt** without individual modifications.
+
+### Token Mapping — Dark Mode Overrides
+
+| Token | Light Value | Dark Value | Preview (Dark) | Rationale |
+|-------|------------|------------|-----------------|-----------|
+| `--color-frost-canvas` | `#f8fafc` | `#0a0e1a` | ![](https://placehold.co/15x15/0a0e1a/0a0e1a.png) | Deep navy-black canvas |
+| `--color-pure-white` | `#ffffff` | `#111827` | ![](https://placehold.co/15x15/111827/111827.png) | Dark card surface (gray-900) |
+| `--color-midnight-slate` | `#090d16` | `#f1f5f9` | ![](https://placehold.co/15x15/f1f5f9/f1f5f9.png) | Inverted text — light slate |
+| `--color-hairline-slate` | `#e2e8f0` | `#1e293b` | ![](https://placehold.co/15x15/1e293b/1e293b.png) | Dark subtle borders (slate-800) |
+| `--color-cool-gray` | `#64748b` | `#94a3b8` | ![](https://placehold.co/15x15/94a3b8/94a3b8.png) | Brighter secondary text |
+| `--color-electric-cobalt` | `#1d4ed8` | `#3b82f6` | ![](https://placehold.co/15x15/3b82f6/3b82f6.png) | Brightened accent for dark bg |
+| `--color-cobalt-glare` | `#3b82f6` | `#60a5fa` | ![](https://placehold.co/15x15/60a5fa/60a5fa.png) | Lighter glare for dark bg |
+| `--color-ice-wash` | `#eff6ff` | `#172554` | ![](https://placehold.co/15x15/172554/172554.png) | Deep blue wash |
+| `--color-jade-wash` | `#ecfdf5` | `#052e16` | ![](https://placehold.co/15x15/052e16/052e16.png) | Deep green wash |
+| `--color-crimson-wash` | `#fef2f2` | `#450a0a` | ![](https://placehold.co/15x15/450a0a/450a0a.png) | Deep red wash |
+| `--color-amber-wash` | `#fffbeb` | `#451a03` | ![](https://placehold.co/15x15/451a03/451a03.png) | Deep amber wash |
+
+**Unchanged in dark mode:** Cyber Jade (`#10b981`), Signal Crimson (`#ef4444`), Warning Amber (`#f59e0b`) — these retain sufficient contrast on dark surfaces.
+
+### Dark Mode Shadow Overrides
+
+| Token | Dark Value |
+|-------|-----------|
+| `--shadow-subtle` | `rgba(0, 0, 0, 0.25) 0px 4px 12px -4px, rgba(0, 0, 0, 0.15) 0px 1px 2px 0px` |
+| `--shadow-floating` | `rgba(0, 0, 0, 0.4) 0px 12px 32px -8px, rgba(0, 0, 0, 0.2) 0px 4px 8px -2px` |
+
+---
+
+## Theme Toggle Component
+
+*   **Role**: Toggle between Light and Dark themes.
+*   **Location**: Header navigation bar (desktop: left of "Compare Deals" button; mobile: next to hamburger menu).
+*   **Behavior**: GSAP cinematic animation — a radial ripple expands from button center covering the viewport with the incoming theme color, theme toggles mid-animation, ripple fades, page elements stagger-settle.
+*   **Persistence**: `localStorage` key `privacyrank-theme`. Falls back to `prefers-color-scheme` system setting.
+*   **Anti-FOUC**: Inline `<script>` in `<head>` reads localStorage before first paint.
+*   **Accessibility**: Respects `prefers-reduced-motion` — skips animation, toggles theme instantly. Button has descriptive `aria-label`.
+*   **Icons**: Moon (→ dark) / Sun (→ light) from `@phosphor-icons/react`. Icon animates with 360° rotation + scale bounce via GSAP.

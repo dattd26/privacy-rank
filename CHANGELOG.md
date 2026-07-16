@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.0] - 2026-07-16
+
+### Added
+- Tích hợp **Dark Mode** toàn trang sử dụng chiến lược CSS custom property override — tất cả components tự động chuyển đổi theme mà không cần sửa đổi riêng lẻ.
+- Tạo `ThemeProvider` context (`src/components/ThemeProvider.tsx`) với `useTheme` hook, hỗ trợ persist theme vào `localStorage` và auto-detect `prefers-color-scheme` hệ thống.
+- Tạo `ThemeToggle` button (`src/components/ThemeToggle.tsx`) với **GSAP radial ripple animation** ấn tượng: vòng tròn phóng to từ nút bấm phủ toàn viewport → theme chuyển giữa animation → ripple fade out → page elements stagger-settle. Icon Sun/Moon xoay 360° + scale bounce.
+- Thêm inline script anti-FOUC trong `<head>` đọc `localStorage` và set class `dark` trước first paint, loại bỏ flash trắng khi load trang.
+- Bổ sung dark mode overrides cho capability tags (ComparisonTable.css) và NEVERHACK button styles.
+- Cập nhật `docs/design.md` với bảng Dark Mode Palette đầy đủ token mapping và Theme Toggle Component specification.
+
+### Changed
+- Cập nhật tài liệu `README.md` phần Bảng màu (Colors) thể hiện chi tiết các mã màu tương ứng cho cả Light Mode và Dark Mode (Midnight Slate, Frost Canvas, Pure White, Electric Cobalt, các màu Wash) để đồng bộ với `docs/design.md`.
+- Cập nhật `globals.css` với dark mode token overrides cho tất cả surfaces, borders, text, accents, wash backgrounds, và shadows.
+- Cập nhật `layout.tsx` wrap `ThemeProvider` và thêm `suppressHydrationWarning`.
+- Cập nhật `Header.tsx` tích hợp `ThemeToggle` component (desktop: bên trái nút Compare Deals; mobile: bên cạnh hamburger menu).
+- Sửa BentoFeatures Cell 2 (dark card) — hardcode white text colors thay vì dùng semantic tokens để tránh invisible text khi dark mode.
+- Sửa Hero logo container dùng theme-aware tokens thay vì hardcoded `bg-slate-50`.
+- Sửa ComparisonTable modal overlay dùng `bg-black/60` thay vì `bg-midnight-slate/60` để hoạt động đúng ở cả 2 themes.
+- Đổi `hover:border-slate-300` thành `hover:border-cool-gray/40` trong VPN comparison cards.
+
 ## [1.0.5] - 2026-07-16
 
 ### Fixed

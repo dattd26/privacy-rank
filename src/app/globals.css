@@ -30,10 +30,68 @@
   --shadow-floating: rgba(15, 23, 42, 0.08) 0px 12px 32px -8px, rgba(0, 0, 0, 0.03) 0px 4px 8px -2px;
 }
 
+/* ──────────────────────────────────────────────────────
+   DARK MODE — Override all tokens via html.dark class
+   ────────────────────────────────────────────────────── */
+html.dark {
+  /* Surface & Canvas */
+  --color-frost-canvas: #0a0e1a;
+  --color-pure-white: #111827;
+  --color-midnight-slate: #f1f5f9;
+
+  /* Borders & Dividers */
+  --color-hairline-slate: #1e293b;
+
+  /* Secondary Text */
+  --color-cool-gray: #94a3b8;
+
+  /* Accent — Brighten for dark backgrounds */
+  --color-electric-cobalt: #3b82f6;
+  --color-cobalt-glare: #60a5fa;
+
+  /* Wash backgrounds — Deep saturated versions */
+  --color-ice-wash: #172554;
+  --color-jade-wash: #052e16;
+  --color-crimson-wash: #450a0a;
+  --color-amber-wash: #451a03;
+
+  /* Shadows — Stronger for dark backgrounds */
+  --shadow-subtle: rgba(0, 0, 0, 0.25) 0px 4px 12px -4px, rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+  --shadow-floating: rgba(0, 0, 0, 0.4) 0px 12px 32px -8px, rgba(0, 0, 0, 0.2) 0px 4px 8px -2px;
+}
+
 body {
   background-color: var(--color-frost-canvas);
   color: var(--color-midnight-slate);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Smooth transition for all themed properties during mode switch */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+/* Opt-out: Prevent transition on elements that animate via GSAP or have their own transitions */
+[data-no-theme-transition],
+[data-no-theme-transition] *,
+.gsap-transitioning {
+  transition-property: none !important;
+}
+
+/* Theme toggle ripple overlay */
+.theme-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  transform: scale(0);
+  will-change: transform, opacity;
+}

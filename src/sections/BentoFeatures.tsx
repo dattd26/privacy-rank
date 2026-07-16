@@ -114,8 +114,8 @@ export default function BentoFeatures() {
           </div>
         </div>
 
-        {/* Cell 2: Military Encryption */}
-        <div className="md:col-span-2 bg-midnight-slate rounded-card p-8 flex flex-col justify-between text-pure-white shadow-floating relative overflow-hidden">
+        {/* Cell 2: Global Streaming — uses a slightly different dark surface to stay visible in both themes */}
+        <div className="md:col-span-2 bg-[#0f1629] dark:bg-[#1a2340] rounded-card border border-transparent dark:border-[#2a3558] p-8 flex flex-col justify-between text-white shadow-floating relative overflow-hidden">
           <div className="absolute -right-6 -bottom-6 opacity-10 transform rotate-12 select-none pointer-events-none">
             <svg
               className="w-48 h-48"
@@ -152,21 +152,21 @@ export default function BentoFeatures() {
             <h3 className="font-headline text-2xl font-bold mb-3">
               Unblock Global Streaming
             </h3>
-            <p className="font-body text-pure-white/70 text-sm leading-relaxed">
+            <p className="font-body text-white/70 text-sm leading-relaxed">
               Bypass geo-restrictions and stream your favorite shows from anywhere in the world without buffering or proxy errors.
             </p>
           </div>
-          <div className="relative z-10 mt-8 font-mono text-[11px] space-y-1 bg-midnight-slate/85 border border-pure-white/10 p-4 rounded-inner select-none">
-            <div className="flex justify-between border-b border-pure-white/10 pb-1.5">
-              <span className="text-pure-white/50">NETFLIX US</span>
+          <div className="relative z-10 mt-8 font-mono text-[11px] space-y-1 bg-black/30 border border-white/10 p-4 rounded-inner select-none">
+            <div className="flex justify-between border-b border-white/10 pb-1.5">
+              <span className="text-white/50">NETFLIX US</span>
               <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
-            <div className="flex justify-between border-b border-pure-white/10 py-1.5">
-              <span className="text-pure-white/50">BBC iPLAYER</span>
+            <div className="flex justify-between border-b border-white/10 py-1.5">
+              <span className="text-white/50">BBC iPLAYER</span>
               <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
             <div className="flex justify-between pt-1.5">
-              <span className="text-pure-white/50">HULU & DISNEY+</span>
+              <span className="text-white/50">HULU & DISNEY+</span>
               <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
           </div>

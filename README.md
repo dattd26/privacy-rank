@@ -2,7 +2,7 @@
 ## Thông tin ứng viên:
 **Đơn vị tuyển dụng:** Công ty TNHH Truyền thông và Quảng cáo H2T  
 **Vị trí ứng tuyển:** Thực tập sinh Fullstack  
-**Họ và tên ứng viên:** Trần Đức Đạt 
+**Họ và tên ứng viên:** Trần Đức Đạt  
 **Thời gian thực hiện:** < 48 giờ  
 
 Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN dành cho thị trường global.
@@ -13,8 +13,8 @@ Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN
 
 Tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: **NEVERHACK** (phong cách an ninh mạng tối giản) và **ExpressVPN** (thương hiệu VPN uy tín, hiện đại)
 
-*   **NEVERHACK (Sovereign Cybersecurity)**: Gợi mở bài học về sự tiết chế màu sắc (chỉ dùng tối đa 5% diện tích cho màu nhấn công nghệ), sử dụng đường kẻ mỏng để phân chia bố cục thay vì card nổi bóng đổ nặng nề, và định hình phông chữ sans hình học tối giản.
-*   **ExpressVPN (Spacious Authority)**: Bài học về việc phân bổ luồng thông tin so sánh thông minh. Sử dụng bảng xếp hạng VPN trực quan với các điểm nhấn (Pros/Cons), thông tin giá ưu đãi và các nhãn "Editor's Choice" nổi bật giúp người dùng đưa ra quyết định nhanh nhất.
+*   **NEVERHACK (Sovereign Cybersecurity)**: Bố cục được chia bằng các đường kẻ mảnh thay vì dùng nhiều card có bóng đổ, kết hợp với font sans-serif đơn giản để tạo cảm giác hiện đại và chuyên nghiệp.
+*   **ExpressVPN (Spacious Authority)**: Tham khảo cách sắp xếp thông tin so sánh VPN rõ ràng và dễ theo dõi. Bảng xếp hạng được trình bày trực quan, kết hợp các mục ưu điểm/nhược điểm (Pros & Cons), giá khuyến mãi và nhãn như "Editor's Choice", giúp người dùng nhanh chóng so sánh và lựa chọn VPN phù hợp.
 
 **Quyết định áp dụng cho PrivacyRank**:
 *   Xây dựng giao diện theo phong cách **Top VPN Services** (Thân thiện, hiện đại).
@@ -29,11 +29,25 @@ Tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: 
 Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CNPM/TopVPNServices2026/privacy-rank/docs/design.md):
 
 *   **Bảng màu (Colors)**:
-    *   ![](https://placehold.co/15x15/090d16/090d16.png) *Midnight Slate* (`#090d16`): Màu chữ chính và các đường nét điều hướng cốt lõi (thay vì màu đen thuần túy để giao diện tinh tế hơn).
-    *   ![](https://placehold.co/15x15/f8fafc/f8fafc.png) *Frost Canvas* (`#f8fafc`): Nền trang web mát lạnh.
-    *   ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) *Electric Cobalt* (`#1d4ed8`): Màu hành động chính, nút bấm, liên kết tích cực.
-    *   ![](https://placehold.co/15x15/10b981/10b981.png) *Cyber Jade* (`#10b981`): Điểm cộng (Pros), chỉ số tốc độ tốt, badge an toàn.
-    *   ![](https://placehold.co/15x15/ef4444/ef4444.png) *Signal Crimson* (`#ef4444`): Điểm trừ (Cons), rò rỉ bảo mật, IP leaks.
+    *   **Midnight Slate** (`--color-midnight-slate`):
+        *   Light Mode: ![](https://placehold.co/15x15/090d16/090d16.png) `Midnight Slate` (`#090d16`) - Màu chữ chính và các đường nét điều hướng cốt lõi.
+        *   Dark Mode: ![](https://placehold.co/15x15/f1f5f9/f1f5f9.png) `Slate Light` (`#f1f5f9`) - Chữ phản cực (inverted text).
+    *   **Frost Canvas** (`--color-frost-canvas`):
+        *   Light Mode: ![](https://placehold.co/15x15/f8fafc/f8fafc.png) `Frost Canvas` (`#f8fafc`) - Nền trang web mát lạnh.
+        *   Dark Mode: ![](https://placehold.co/15x15/0a0e1a/0a0e1a.png) `Deep Navy-Black` (`#0a0e1a`) - Nền trang web tối.
+    *   **Pure White** (`--color-pure-white`):
+        *   Light Mode: ![](https://placehold.co/15x15/ffffff/ffffff.png) `Pure White` (`#ffffff`) - Nền card, menu điều hướng và footer.
+        *   Dark Mode: ![](https://placehold.co/15x15/111827/111827.png) `Slate Dark` (`#111827`) - Nền card chế độ tối.
+    *   **Electric Cobalt** (`--color-electric-cobalt`):
+        *   Light Mode: ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) `Electric Cobalt` (`#1d4ed8`) - Màu hành động chính, nút bấm, liên kết tích cực.
+        *   Dark Mode: ![](https://placehold.co/15x15/3b82f6/3b82f6.png) `Bright Cobalt` (`#3b82f6`) - Màu hành động làm nổi bật trên nền tối.
+    *   **Cyber Jade** (`--color-cyber-jade`): ![](https://placehold.co/15x15/10b981/10b981.png) `Cyber Jade` (`#10b981`) - Giữ nguyên ở cả hai chế độ (Điểm cộng - Pros, chỉ số tốc độ tốt, badge an toàn).
+    *   **Signal Crimson** (`--color-signal-crimson`): ![](https://placehold.co/15x15/ef4444/ef4444.png) `Signal Crimson` (`#ef4444`) - Giữ nguyên ở cả hai chế độ (Điểm trừ - Cons, rò rỉ bảo mật, IP leaks).
+    *   **Wash Backgrounds** (Màu nền phụ nhạt):
+        *   *Ice Wash* (`--color-ice-wash`): Light `#eff6ff` | Dark `#172554` (Nền xanh nhạt cho tag/badge).
+        *   *Jade Wash* (`--color-jade-wash`): Light `#ecfdf5` | Dark `#052e16` (Nền pros/verified).
+        *   *Crimson Wash* (`--color-crimson-wash`): Light `#fef2f2` | Dark `#450a0a` (Nền cons/security leak).
+        *   *Amber Wash* (`--color-amber-wash`): Light `#fffbeb` | Dark `#451a03` (Nền rating/medium stats).
 
 *   **Quy tắc Bo góc đồng nhất (Shape Consistency Lock)**:
     *   Nút bấm (buttons) và ô nhập liệu (inputs) được khóa ở góc bo tròn **8px** (`rounded-btn`/`rounded-inner`) để tạo cảm giác vững chãi, chắc chắn của công cụ an ninh.
@@ -48,9 +62,10 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 ## 3. Giải thích Quyết định Thiết kế
 
 ### 3.1. Vì sao chọn bảng màu này?
-*   Chúng tôi chọn **Electric Cobalt** kết hợp với **Midnight Slate** trên nền **Frost Canvas** vì đây là bảng màu đặc trưng của các tổ chức kiểm định an ninh mạng độc lập. Nó mang tính trung lập, đáng tin cậy và khoa học.
-*   Việc hạn chế màu sắc sặc sỡ và chỉ dùng màu Cobalt cho CTA chính giúp tăng tỷ lệ nhấp chuột (CTR) tối đa, vì nút mua hàng sẽ là điểm thu hút thị giác duy nhất trên màn hình phẳng.
-*   Màu xanh ngọc (Cyber Jade) và đỏ (Signal Crimson) được dùng rất tiết chế để phân cấp rõ ràng giữa các điểm cộng và điểm trừ của dịch vụ.
+*   Tôi chọn **Electric Cobalt** ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) kết hợp với **Midnight Slate** ![](https://placehold.co/15x15/090d16/090d16.png) trên nền **Frost Canvas** ![](https://placehold.co/15x15/f8fafc/f8fafc.png) vì đây là bảng màu đặc trưng của các tổ chức kiểm định an ninh mạng độc lập. Nó mang tính trung lập, đáng tin cậy và khoa học.
+*   Việc hạn chế màu sắc sặc sỡ và chỉ dùng màu Cobalt ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) cho CTA chính giúp tăng tỷ lệ nhấp chuột (CTR) tối đa, vì nút mua hàng sẽ là điểm thu hút thị giác duy nhất trên màn hình phẳng.
+*   Màu xanh ngọc (Cyber Jade) ![](https://placehold.co/15x15/10b981/10b981.png) và đỏ (Signal Crimson) ![](https://placehold.co/15x15/ef4444/ef4444.png) được dùng rất tiết chế để phân cấp rõ ràng giữa các điểm cộng và điểm trừ của dịch vụ.
+
 
 ### 3.2. Vì sao chọn typography này?
 *   `Plus Jakarta Sans` mang lại nét hiện đại, công nghệ cao nhưng không quá thô cứng nhờ các đường bo góc chữ tinh tế.

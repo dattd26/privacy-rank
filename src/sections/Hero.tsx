@@ -161,7 +161,7 @@ export default function Hero() {
           {/* Logo & Title */}
           <div className="flex items-center gap-5 mb-6">
             {/* Khung chứa logo được tối ưu: chuyển từ khung vuông sang khung chữ nhật dẹt (w-24 h-14) */}
-            <div className="relative w-24 h-14 flex items-center justify-center bg-slate-50/50 rounded-xl p-2 border border-hairline-slate shadow-sm hover:border-blue-200 transition-colors">
+            <div className="relative w-24 h-14 flex items-center justify-center bg-frost-canvas rounded-xl p-2 border border-hairline-slate shadow-sm hover:border-cobalt-glare/40 transition-colors">
               {/* Huy hiệu Gold Badge cho Rank 1 */}
               <span className="absolute -top-2 -left-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-[10px] font-black text-white px-2 py-0.5 rounded-full shadow-sm uppercase tracking-wider select-none z-10">
                 #1
