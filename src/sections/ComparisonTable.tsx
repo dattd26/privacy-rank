@@ -90,7 +90,7 @@ const vpnData: VPNDatum[] = [
     rank: 4,
     name: "CyberGhost",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/CyberGhost_VPN_logo.svg/1920px-CyberGhost_VPN_logo.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/0/03/CyberGhostVPN_Logo.png",
     isEditorsChoice: false,
     overallScore: 9.2,
     speed: 90,
@@ -109,7 +109,7 @@ const vpnData: VPNDatum[] = [
     rank: 5,
     name: "Private Internet Access",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Private_Internet_Access_logo.svg/1920px-Private_Internet_Access_logo.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Private_Internet_Access_Logo_2021.svg/1920px-Private_Internet_Access_Logo_2021.svg.png?_=20210617015158",
     isEditorsChoice: false,
     overallScore: 9.1,
     speed: 89,
@@ -128,7 +128,7 @@ const vpnData: VPNDatum[] = [
     rank: 6,
     name: "Proton VPN",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Proton_VPN_logo.svg/1920px-Proton_VPN_logo.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/ProtonVPN_Logo.svg/1920px-ProtonVPN_Logo.svg.png?_=20190918192521",
     isEditorsChoice: false,
     overallScore: 9.3,
     speed: 91,
@@ -147,7 +147,7 @@ const vpnData: VPNDatum[] = [
     rank: 7,
     name: "IPVanish",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Ipvanish-logo.svg/1920px-Ipvanish-logo.svg.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbvvhILmsJCwY4TkjKFfJAYpenvtLS0K_rYMR29EOGzXuTDAsY1Zgji0M&s=10",
     isEditorsChoice: false,
     overallScore: 8.8,
     speed: 87,
@@ -166,7 +166,7 @@ const vpnData: VPNDatum[] = [
     rank: 8,
     name: "Mullvad VPN",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Mullvad_logo.svg/1920px-Mullvad_logo.svg.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQzMf5VeWs1wO6YBuurmrgF1OJKdLlN9uERitUAHSV8A&s=10",
     isEditorsChoice: false,
     overallScore: 9.0,
     speed: 88,
@@ -185,7 +185,7 @@ const vpnData: VPNDatum[] = [
     rank: 9,
     name: "Windscribe",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Windscribe_logo.svg/1920px-Windscribe_logo.svg.png",
+      "https://i.pcmag.com/imagery/reviews/04nsFjYxgdcYmKbESqG7dSM-9..v1718650718.jpg",
     isEditorsChoice: false,
     overallScore: 8.7,
     speed: 85,
@@ -204,7 +204,7 @@ const vpnData: VPNDatum[] = [
     rank: 10,
     name: "VyprVPN",
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/VyprVPN_logo.png/640px-VyprVPN_logo.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxa-64iU6EbGBRf8Jok7um6Ym5MrD601cDpsYyGQJ55DOgBMT8D1toriV&s=10",
     isEditorsChoice: false,
     overallScore: 8.5,
     speed: 82,
@@ -613,49 +613,51 @@ export default function ComparisonTable() {
             {/* CTA Button */}
             <Button
               onClick={handleCopyAndGo}
-              className={`w-full py-3.5 flex items-center justify-center gap-2 text-base rounded-btn font-semibold active:scale-[0.98] transition-all duration-300 ${
+              className={`w-full py-3.5 active:scale-[0.98] transition-all duration-300 ${
                 copied 
                   ? "bg-cyber-jade hover:bg-cyber-jade/95 shadow-none" 
                   : "bg-electric-cobalt hover:bg-electric-cobalt/95"
               }`}
             >
-              {copied ? (
-                <>
-                  <svg
-                    className="w-5 h-5 animate-bounce"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Redirecting to Homepage...</span>
-                </>
-              ) : (
-                <>
-                  <span>Copy Code & Go to Deal</span>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </>
-              )}
+              <span className="flex items-center justify-center gap-2 w-full">
+                {copied ? (
+                  <>
+                    <svg
+                      className="w-5 h-5 animate-bounce shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={3}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>Redirecting to Homepage...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Copy Code & Go to Deal</span>
+                    <svg
+                      className="w-4 h-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </>
+                )}
+              </span>
             </Button>
             
             <p className="text-[11px] text-cool-gray font-medium mt-3 italic select-none">
