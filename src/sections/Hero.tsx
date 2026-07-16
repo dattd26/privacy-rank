@@ -21,24 +21,32 @@ export default function Hero() {
       // 1. Entrance animation for Left Content
       const leftElements = leftContentRef.current?.children;
       if (leftElements) {
-        gsap.from(Array.from(leftElements), {
-          y: 24,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: "power2.out",
-        });
+        gsap.fromTo(
+          Array.from(leftElements),
+          { y: 24, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: "power2.out",
+          }
+        );
       }
 
       // 2. Entrance animation for Right Widget
       if (rightWidgetRef.current) {
-        gsap.from(rightWidgetRef.current, {
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          delay: 0.15,
-          ease: "power2.out",
-        });
+        gsap.fromTo(
+          rightWidgetRef.current,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            delay: 0.15,
+            ease: "power2.out",
+          }
+        );
       }
 
       // 3. Progress bars filling animation

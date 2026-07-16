@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2026-07-16
+
+### Fixed
+- Sửa lỗi kẹt opacity trên các card so sánh và bento grid bằng cách chuyển đổi từ `gsap.from` sang `gsap.fromTo`. Lỗi xảy ra do React 18 Strict Mode chạy setup hooks hai lần, khiến GSAP chụp lại trạng thái opacity 0 (của các phần tử bị stagger) làm giá trị đích. Việc dùng `fromTo` đã cố định rõ ràng điểm bắt đầu (`opacity: 0`) và kết thúc (`opacity: 1`), loại bỏ hiện tượng các card phía sau bị mờ hoặc ẩn hẳn.
+- Áp dụng tương tự cho animation tại phần Hero (`Hero.tsx`) để tăng độ tin cậy và chống lỗi kẹt trạng thái khi remount.
+
 ## [1.0.0] - 2026-07-16
 
 ### Added

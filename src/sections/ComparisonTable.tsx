@@ -97,18 +97,22 @@ export default function ComparisonTable() {
       // Animate comparison cards when entering view
       const cards = cardsRef.current?.children;
       if (cards) {
-        gsap.from(Array.from(cards), {
-          scrollTrigger: {
-            trigger: cardsRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-          y: 30,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.1,
-          ease: "power2.out",
-        });
+        gsap.fromTo(
+          Array.from(cards),
+          { y: 30, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: cardsRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power2.out",
+          }
+        );
       }
     },
     { scope: containerRef }

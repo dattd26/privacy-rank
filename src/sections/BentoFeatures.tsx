@@ -17,18 +17,22 @@ export default function BentoFeatures() {
       // Cascade entrance for Bento Cards
       const cards = gridRef.current?.children;
       if (cards) {
-        gsap.from(Array.from(cards), {
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-          y: 30,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: "power2.out",
-        });
+        gsap.fromTo(
+          Array.from(cards),
+          { y: 30, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: "power2.out",
+          }
+        );
       }
 
       // Chart bars height scale-up animation
