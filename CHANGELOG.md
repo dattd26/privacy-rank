@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.2] - 2026-07-16
+
+### Added
+- Bổ sung thêm 7 VPN mới vào dữ liệu so sánh (CyberGhost, Proton VPN, PIA, IPVanish, Mullvad, Windscribe, VyprVPN) nâng tổng số dịch vụ hỗ trợ lên 10 VPN.
+- Thêm cơ chế Show More / Show Less giúp giới hạn hiển thị mặc định 5 VPN đầu tiên và mở rộng danh sách khi click, đi kèm hiệu ứng trượt/mờ dần bằng GSAP.
+- Thêm nhãn tên VPN dạng văn bản ngay bên dưới logo để tăng độ nhận diện.
+- Tích hợp Premium Popup/Modal "Get Deal" ngẫu nhiên ưu đãi 40% - 70%, tự động copy Coupon và chuyển hướng đến trang chủ chính thức của VPN.
+
 ## [1.0.1] - 2026-07-16
 
 ### Fixed

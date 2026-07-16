@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Button from "../components/Button";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -33,7 +33,7 @@ const vpnData: VPNDatum[] = [
     rank: 1,
     name: "NordVPN",
     logoUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBRyYPt7hxMZbxrYPxtzYrxZ-977Ror7I5-vV1_kulYNwM6lrBuRbLQblGHqvpZmZN1PgEjAgbxDCckV0JntlZKoqbzeUglfsuL1LfCgR32T2OS5Hd-DVLJ1BZEObfIvgY5Ra_T8OjmVaz-23jRHo73XbOVVN07RNg2ZXiwh9rcMVmm0JVaXsVSwLb5wcCWkj_aAP2WLVxxndO0v3un697968AMmcrXmsyW9Z9xk-VzLgepUdi725jIh1rHsZTpCjwXSzfXu7C30x8",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/NordVPN_logo.svg/1920px-NordVPN_logo.svg.png?_=20220226150306",
     isEditorsChoice: true,
     overallScore: 9.8,
     speed: 98,
@@ -46,13 +46,13 @@ const vpnData: VPNDatum[] = [
       { label: "Diskless Servers", isPositive: true },
       { label: "Renewal Pricing", isPositive: false },
     ],
-    dealUrl: "#",
+    dealUrl: "https://nordvpn.com",
   },
   {
     rank: 2,
     name: "Surfshark",
     logoUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAeUY8bIYo8lcXr2TtvZO0tN6AGGNKtxsK7xtkHycFhThp-pPaG19W0i-n9AY9TVoQB3SSp7ax16p4vYaihnsRU-xM_vfEvr28wfqMmjY_wyOnowwo2OhjwXGQSeHrNvVCkFCwEERFajD-fAXLvrIDrwGI-LjcuB0FNuHp-dv6DEknA2dVEaNketFVtUUCsmXjnTLSuhxBbI98GnldcHxUPQG1BwE1zc-O-vXJQdlI3H8BYtwQuNaGAI_RAfTgPMmoBwEcMgCqRh28",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Surfshark_logo.svg/1920px-Surfshark_logo.svg.png?_=20230320181239",
     isEditorsChoice: false,
     overallScore: 9.6,
     speed: 96,
@@ -65,13 +65,13 @@ const vpnData: VPNDatum[] = [
       { label: "Dynamic MultiHop", isPositive: true },
       { label: "Support Delay", isPositive: false },
     ],
-    dealUrl: "#",
+    dealUrl: "https://surfshark.com",
   },
   {
     rank: 3,
     name: "ExpressVPN",
     logoUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCaMyhZ-a8LNVMsfph-gy4FvT_2QzpG2sGW9codYFKxnEHSxpIwIQ6bucXbS2_Uw6PIPUJQfQ9ghBE6N5fCw1Qb8DhYICqd17GO_jWMD2L9Zlnahbp18rFeQ_mVClNi120Y21N5JdyVjGdeZyvYlGXmyU9GnNn131Y9gRvwqDDjIkAPNHv9XufiFP4r_2oIalRpVbthnq2kvEKyVwhu5_Bjeu-Wf3NgNBHa3fyvD01nkDHmS600kg6NfJNwzSuxydG_D-nsYrbniQg",
+      "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/ExpressVPN-logo.svg/1920px-ExpressVPN-logo.svg.png?_=20210118095637",
     isEditorsChoice: false,
     overallScore: 9.4,
     speed: 92,
@@ -84,21 +84,170 @@ const vpnData: VPNDatum[] = [
       { label: "TrustedServer Tech", isPositive: true },
       { label: "Premium Cost", isPositive: false },
     ],
-    dealUrl: "#",
+    dealUrl: "https://expressvpn.com",
+  },
+  {
+    rank: 4,
+    name: "CyberGhost",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/CyberGhost_VPN_logo.svg/1920px-CyberGhost_VPN_logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 9.2,
+    speed: 90,
+    privacy: 94,
+    security: 95,
+    unblocking: 93,
+    price: "$2.19/mo",
+    capabilities: [
+      { label: "7-Device Limit", isPositive: true },
+      { label: "NoSpy Servers", isPositive: true },
+      { label: "No Audit Proof", isPositive: false },
+    ],
+    dealUrl: "https://cyberghostvpn.com",
+  },
+  {
+    rank: 5,
+    name: "Private Internet Access",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Private_Internet_Access_logo.svg/1920px-Private_Internet_Access_logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 9.1,
+    speed: 89,
+    privacy: 96,
+    security: 93,
+    unblocking: 91,
+    price: "$2.03/mo",
+    capabilities: [
+      { label: "Proven No-Logs", isPositive: true },
+      { label: "Highly Customizable", isPositive: true },
+      { label: "US Jurisdiction", isPositive: false },
+    ],
+    dealUrl: "https://privateinternetaccess.com",
+  },
+  {
+    rank: 6,
+    name: "Proton VPN",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Proton_VPN_logo.svg/1920px-Proton_VPN_logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 9.3,
+    speed: 91,
+    privacy: 98,
+    security: 97,
+    unblocking: 88,
+    price: "$4.99/mo",
+    capabilities: [
+      { label: "Swiss Privacy", isPositive: true },
+      { label: "Open Source Apps", isPositive: true },
+      { label: "Higher Base Price", isPositive: false },
+    ],
+    dealUrl: "https://protonvpn.com",
+  },
+  {
+    rank: 7,
+    name: "IPVanish",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Ipvanish-logo.svg/1920px-Ipvanish-logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 8.8,
+    speed: 87,
+    privacy: 90,
+    security: 91,
+    unblocking: 89,
+    price: "$3.25/mo",
+    capabilities: [
+      { label: "Unlimited Devices", isPositive: true },
+      { label: "Owned Network", isPositive: true },
+      { label: "Complex Setup", isPositive: false },
+    ],
+    dealUrl: "https://ipvanish.com",
+  },
+  {
+    rank: 8,
+    name: "Mullvad VPN",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Mullvad_logo.svg/1920px-Mullvad_logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 9.0,
+    speed: 88,
+    privacy: 99,
+    security: 95,
+    unblocking: 72,
+    price: "$5.40/mo",
+    capabilities: [
+      { label: "No Email Needed", isPositive: true },
+      { label: "Cash Payments", isPositive: true },
+      { label: "Weak Unblocking", isPositive: false },
+    ],
+    dealUrl: "https://mullvad.net",
+  },
+  {
+    rank: 9,
+    name: "Windscribe",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Windscribe_logo.svg/1920px-Windscribe_logo.svg.png",
+    isEditorsChoice: false,
+    overallScore: 8.7,
+    speed: 85,
+    privacy: 92,
+    security: 90,
+    unblocking: 92,
+    price: "$5.75/mo",
+    capabilities: [
+      { label: "R.O.B.E.R.T. Blocker", isPositive: true },
+      { label: "Config Gen", isPositive: true },
+      { label: "Small Network", isPositive: false },
+    ],
+    dealUrl: "https://windscribe.com",
+  },
+  {
+    rank: 10,
+    name: "VyprVPN",
+    logoUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/VyprVPN_logo.png/640px-VyprVPN_logo.png",
+    isEditorsChoice: false,
+    overallScore: 8.5,
+    speed: 82,
+    privacy: 93,
+    security: 92,
+    unblocking: 85,
+    price: "$5.00/mo",
+    capabilities: [
+      { label: "Chameleon Tech", isPositive: true },
+      { label: "Self-Owned Server", isPositive: true },
+      { label: "Support Speed", isPositive: false },
+    ],
+    dealUrl: "https://vyprvpn.com",
   },
 ];
+
+interface ActiveDeal {
+  vpnName: string;
+  logoUrl: string;
+  discount: number;
+  couponCode: string;
+  dealUrl: string;
+}
 
 export default function ComparisonTable() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [activeDeal, setActiveDeal] = useState<ActiveDeal | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const visibleVPNs = isExpanded ? vpnData : vpnData.slice(0, 5);
+
+  // GSAP animation for initial view
   useGSAP(
     () => {
-      // Animate comparison cards when entering view
       const cards = cardsRef.current?.children;
       if (cards) {
+        // Only animate initial batch
+        const initialCards = Array.from(cards).slice(0, 5);
         gsap.fromTo(
-          Array.from(cards),
+          initialCards,
           { y: 30, opacity: 0 },
           {
             scrollTrigger: {
@@ -117,6 +266,57 @@ export default function ComparisonTable() {
     },
     { scope: containerRef }
   );
+
+  // GSAP animation when Show More is triggered
+  useGSAP(
+    () => {
+      if (isExpanded) {
+        const cards = cardsRef.current?.children;
+        if (cards && cards.length > 5) {
+          const newCards = Array.from(cards).slice(5);
+          gsap.fromTo(
+            newCards,
+            { y: 20, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.4,
+              stagger: 0.08,
+              ease: "power2.out",
+            }
+          );
+        }
+      }
+    },
+    { dependencies: [isExpanded], scope: containerRef }
+  );
+
+  const handleGetDeal = (vpn: VPNDatum) => {
+    const discount = Math.floor(Math.random() * 31) + 40; // Random 40% - 70%
+    const cleanName = vpn.name.replace(/[^a-zA-Z0-9]/g, "").toUpperCase();
+    const couponCode = `${cleanName}${discount}`;
+    
+    setActiveDeal({
+      vpnName: vpn.name,
+      logoUrl: vpn.logoUrl,
+      discount,
+      couponCode,
+      dealUrl: vpn.dealUrl,
+    });
+    setCopied(false);
+  };
+
+  const handleCopyAndGo = () => {
+    if (!activeDeal) return;
+    
+    navigator.clipboard.writeText(activeDeal.couponCode);
+    setCopied(true);
+    
+    // Redirect after brief delay so user sees "Copied!" feedback
+    setTimeout(() => {
+      window.open(activeDeal.dealUrl, "_blank", "noopener,noreferrer");
+    }, 1200);
+  };
 
   return (
     <section
@@ -137,26 +337,29 @@ export default function ComparisonTable() {
         </div>
 
         <div ref={cardsRef} className="space-y-6">
-          {vpnData.map((vpn) => (
+          {visibleVPNs.map((vpn) => (
             <div
               key={vpn.name}
               className={`bg-pure-white border border-hairline-slate rounded-card p-6 shadow-subtle flex flex-col xl:flex-row gap-8 items-center transition-all duration-300 hover:border-slate-300 hover:shadow-floating ${
                 vpn.rank === 1 ? "" : "opacity-95"
               }`}
             >
-              {/* Left Column: Rank, Logo, Badge */}
+              {/* Left Column: Rank, Logo, Brand Name & Badge */}
               <div className="flex items-center gap-6 w-full xl:w-1/4 select-none">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-midnight-slate flex items-center justify-center text-pure-white font-mono text-xl md:text-2xl font-bold border-4 border-hairline-slate">
                   {vpn.rank}
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-1">
                   <div
                     className="w-28 h-8 bg-contain bg-no-repeat bg-left"
                     style={{ backgroundImage: `url('${vpn.logoUrl}')` }}
                     title={vpn.name}
                   ></div>
+                  <span className="font-headline text-sm font-bold text-midnight-slate tracking-tight">
+                    {vpn.name}
+                  </span>
                   {vpn.isEditorsChoice && (
-                    <span className="text-[10px] font-mono font-bold text-cyber-jade mt-2 uppercase tracking-widest">
+                    <span className="text-[10px] font-mono font-bold text-cyber-jade uppercase tracking-widest mt-0.5">
                       Editor's Choice
                     </span>
                   )}
@@ -285,14 +488,183 @@ export default function ComparisonTable() {
                     {vpn.price}
                   </p>
                 </div>
-                <Button className="w-full sm:w-auto active:scale-[0.97] whitespace-nowrap">
+                <Button 
+                  onClick={() => handleGetDeal(vpn)} 
+                  className="w-full sm:w-auto active:scale-[0.97] whitespace-nowrap"
+                >
                   Get Deal
                 </Button>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Show More / Show Less Button */}
+        <div className="flex justify-center mt-12">
+          <Button
+            variant="secondary"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-2 px-8 py-3 group"
+          >
+            <span>{isExpanded ? "Show Less" : "Show More VPNs"}</span>
+            <svg
+              className={`w-4 h-4 transition-transform duration-300 ${
+                isExpanded ? "rotate-180" : "group-hover:translate-y-0.5"
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </Button>
+        </div>
       </div>
+
+      {/* Premium Deal Modal/Popup */}
+      {activeDeal && (
+        <div className="fixed inset-0 bg-midnight-slate/60 backdrop-blur-md z-50 flex items-center justify-center p-4">
+          {/* Modal Overlay Close Handler */}
+          <div 
+            className="absolute inset-0 cursor-default" 
+            onClick={() => setActiveDeal(null)}
+          ></div>
+          
+          {/* Modal Container */}
+          <div className="bg-pure-white border border-hairline-slate rounded-card shadow-floating max-w-md w-full overflow-hidden relative p-8 flex flex-col items-center text-center animate-in fade-in zoom-in-95 duration-200 z-10">
+            {/* Close Button */}
+            <button
+              onClick={() => setActiveDeal(null)}
+              className="absolute top-4 right-4 text-cool-gray hover:text-midnight-slate p-1.5 hover:bg-frost-canvas rounded-full transition-colors cursor-pointer"
+              aria-label="Close modal"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            {/* Discount Stamp */}
+            <div className="w-24 h-24 rounded-full bg-electric-cobalt/5 border border-electric-cobalt/25 flex flex-col items-center justify-center mb-6 shadow-inner select-none animate-pulse">
+              <span className="font-mono text-3xl font-extrabold text-electric-cobalt">
+                {activeDeal.discount}%
+              </span>
+              <span className="text-[10px] font-mono font-bold text-electric-cobalt/80 tracking-widest uppercase">
+                OFF
+              </span>
+            </div>
+
+            {/* Title & Brand */}
+            <h3 className="font-headline text-2xl font-bold text-midnight-slate mb-2">
+              Exclusive Deal Unlocked!
+            </h3>
+            <p className="font-body text-sm text-cool-gray max-w-sm mb-6">
+              You have successfully claimed a special coupon for{" "}
+              <strong className="text-midnight-slate">{activeDeal.vpnName}</strong>.
+            </p>
+
+            {/* Brand Logo & Name Area */}
+            <div className="flex items-center gap-3 bg-frost-canvas border border-hairline-slate px-4 py-2.5 rounded-inner mb-6">
+              <div
+                className="w-24 h-6 bg-contain bg-no-repeat bg-center"
+                style={{ backgroundImage: `url('${activeDeal.logoUrl}')` }}
+                title={activeDeal.vpnName}
+              ></div>
+            </div>
+
+            {/* Coupon Code Block */}
+            <div className="w-full bg-ice-wash/30 border border-dashed border-electric-cobalt/30 rounded-inner p-4 mb-6 flex items-center justify-between group hover:border-electric-cobalt/50 transition-colors">
+              <div className="flex flex-col text-left">
+                <span className="text-[10px] font-mono text-cool-gray font-bold uppercase tracking-wider">
+                  COUPON CODE
+                </span>
+                <span className="font-mono font-extrabold text-lg text-electric-cobalt tracking-wider select-all mt-0.5">
+                  {activeDeal.couponCode}
+                </span>
+              </div>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(activeDeal.couponCode);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+                className="text-xs font-semibold text-electric-cobalt hover:text-electric-cobalt/80 px-2.5 py-1.5 rounded-inner bg-pure-white border border-hairline-slate shadow-subtle cursor-pointer active:scale-95 transition-all"
+              >
+                {copied ? "Copied!" : "Copy"}
+              </button>
+            </div>
+
+            {/* CTA Button */}
+            <Button
+              onClick={handleCopyAndGo}
+              className={`w-full py-3.5 flex items-center justify-center gap-2 text-base rounded-btn font-semibold active:scale-[0.98] transition-all duration-300 ${
+                copied 
+                  ? "bg-cyber-jade hover:bg-cyber-jade/95 shadow-none" 
+                  : "bg-electric-cobalt hover:bg-electric-cobalt/95"
+              }`}
+            >
+              {copied ? (
+                <>
+                  <svg
+                    className="w-5 h-5 animate-bounce"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={3}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Redirecting to Homepage...</span>
+                </>
+              ) : (
+                <>
+                  <span>Copy Code & Go to Deal</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </>
+              )}
+            </Button>
+            
+            <p className="text-[11px] text-cool-gray font-medium mt-3 italic select-none">
+              *Promo code automatically applied on checkout page.
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
