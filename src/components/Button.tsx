@@ -13,7 +13,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyle =
-    "px-6 py-2.5 font-body font-semibold text-sm rounded-btn transition-all duration-200 active:scale-[0.98] select-none text-center inline-block whitespace-nowrap cursor-pointer";
+    "px-6 py-2.5 font-body font-semibold text-sm rounded-btn transition-all duration-200 active:scale-[0.98] select-none text-center inline-flex items-center justify-center whitespace-nowrap cursor-pointer";
 
   const variants = {
     primary:

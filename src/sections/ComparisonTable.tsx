@@ -505,11 +505,11 @@ export default function ComparisonTable() {
           <Button
             variant="secondary"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-2 px-8 py-3 group"
+            className="nh-btn-more px-8 py-3.5 group"
           >
             <span>{isExpanded ? "Show Less" : "Show More VPNs"}</span>
             <svg
-              className={`w-4 h-4 transition-transform duration-300 ${
+              className={`w-4 h-4 nh-btn-more-icon ${
                 isExpanded ? "rotate-180" : "group-hover:translate-y-0.5"
               }`}
               fill="none"

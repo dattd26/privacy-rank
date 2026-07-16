@@ -1,17 +1,19 @@
-# BÀI TEST THIẾT KẾ UI/UX & TRIỂN KHAI MÃ NGUỒN — TRANG PRIVACYRANK
-**Vị trí ứng tuyển:** Thực tập sinh Fullstack  
+# Bài Test Thiết Kế UI/UX – Trang Top VPN
+## Thông tin ứng viên:
 **Đơn vị tuyển dụng:** Công ty TNHH Truyền thông và Quảng cáo H2T  
+**Vị trí ứng tuyển:** Thực tập sinh Fullstack  
+**Họ và tên ứng viên:** Trần Đức Đạt 
 **Thời gian thực hiện:** < 48 giờ  
 
-Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN chuyên sâu dành cho thị trường toàn cầu. Toàn bộ nội dung giao diện được viết bằng Tiếng Anh chuẩn cybersecurity review, giao diện tối ưu hóa chuyển đổi (conversion-oriented) và áp dụng các tiêu chuẩn thiết kế cao cấp nhất (Clinical Modernism).
+Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN dành cho thị trường global.
 
 ---
 
 ## 1. Kết quả Nghiên cứu UI/UX (UI Research)
 
-Chúng tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: **NEVERHACK** (phong cách an ninh mạng tối giản, sắc sảo) và **ExpressVPN** (thương hiệu uy tín, thoáng đãng, tập trung chuyển đổi).
+Tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: **NEVERHACK** (phong cách an ninh mạng tối giản) và **ExpressVPN** (thương hiệu VPN uy tín, hiện đại)
 
-*   **NEVERHACK (Sovereign Cybersecurity)**: Gợi mở bài học về sự tiết chế màu sắc (chỉ dùng tối đa 5% diện tích cho màu nhấn công nghệ), sử dụng đường kẻ mỏng hairline slate để phân chia bố cục thay vì card nổi bóng đổ nặng nề, và định hình phông chữ sans hình học tối giản.
+*   **NEVERHACK (Sovereign Cybersecurity)**: Gợi mở bài học về sự tiết chế màu sắc (chỉ dùng tối đa 5% diện tích cho màu nhấn công nghệ), sử dụng đường kẻ mỏng để phân chia bố cục thay vì card nổi bóng đổ nặng nề, và định hình phông chữ sans hình học tối giản.
 *   **ExpressVPN (Spacious Authority)**: Bài học về việc phân bổ luồng thông tin so sánh thông minh. Sử dụng bảng xếp hạng VPN trực quan với các điểm nhấn (Pros/Cons), thông tin giá ưu đãi và các nhãn "Editor's Choice" nổi bật giúp người dùng đưa ra quyết định nhanh nhất.
 
 **Quyết định áp dụng cho PrivacyRank**:

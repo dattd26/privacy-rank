@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.5] - 2026-07-16
+
+### Fixed
+- Sửa lỗi layout của nút Show More / Show Less trong `ComparisonTable.tsx` khiến icon mũi tên bị xuống hàng trên một số kích thước màn hình.
+- Chuyển đổi component `Button` sang sử dụng `inline-flex` làm kiểu hiển thị mặc định để căn chỉnh hoàn hảo các phần tử con (text và icon).
+
+### Changed
+- Thiết kế lại phong cách nút Show More / Show Less lấy cảm hứng từ NEVERHACK với border-radius dạng viên thuốc hoàn toàn (`rounded-full`), bóng đổ inset tinh tế và hiệu ứng hover nhấc nhẹ (`-translate-y-2px`) kèm bóng đổ mượt mà.
+
 ## [1.0.4] - 2026-07-16
 
 ### Changed
