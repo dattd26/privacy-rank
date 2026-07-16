@@ -67,11 +67,10 @@ export default function BentoFeatures() {
     >
       <div className="text-center mb-16">
         <h2 className="font-headline text-[32px] font-bold text-midnight-slate mb-4">
-          Core Security Indicators
+          Why You Need a Top VPN
         </h2>
         <p className="font-body text-cool-gray max-w-2xl mx-auto">
-          We test critical architectural specs of every provider to verify actual
-          user safety in compromised environments.
+          Whether you want to access blocked content, protect your privacy on public Wi-Fi, or stop your ISP from throttling your speeds.
         </p>
       </div>
 
@@ -99,20 +98,18 @@ export default function BentoFeatures() {
               </svg>
             </div>
             <h3 className="font-headline text-2xl font-bold text-midnight-slate mb-3">
-              No-Logs Policy Verified
+              One-Click Privacy
             </h3>
             <p className="font-body text-cool-gray text-sm leading-relaxed">
-              We examine court records, warrant canaries, and 3rd-party independent
-              audits from Deloitte and PwC to ensure your data is never written to
-              disk.
+              Hide your IP address and encrypt your internet connection with a single click. Protect your personal data from hackers, ISPs, and snoops on any network.
             </p>
           </div>
           <div className="mt-8 flex items-center gap-4 border-t border-hairline-slate pt-6 select-none">
             <div className="bg-jade-wash text-cyber-jade px-4 py-2 rounded-full font-mono text-[11px] font-bold">
-              AUDIT STAMP: 2026-Q1
+              STATUS: PROTECTED
             </div>
             <span className="text-xs font-semibold text-cool-gray">
-              Verified Infrastructure
+              Bank-grade Encryption
             </span>
           </div>
         </div>
@@ -153,25 +150,24 @@ export default function BentoFeatures() {
               </svg>
             </div>
             <h3 className="font-headline text-2xl font-bold mb-3">
-              Military-Grade Encryption
+              Unblock Global Streaming
             </h3>
             <p className="font-body text-pure-white/70 text-sm leading-relaxed">
-              AES-256 visualization stress tests prove that current brute-force
-              methods would take billions of years to decrypt a single tunnel.
+              Bypass geo-restrictions and stream your favorite shows from anywhere in the world without buffering or proxy errors.
             </p>
           </div>
           <div className="relative z-10 mt-8 font-mono text-[11px] space-y-1 bg-midnight-slate/85 border border-pure-white/10 p-4 rounded-inner select-none">
             <div className="flex justify-between border-b border-pure-white/10 pb-1.5">
-              <span className="text-pure-white/50">BIT DEPTH</span>
-              <span className="font-bold">256-BIT</span>
+              <span className="text-pure-white/50">NETFLIX US</span>
+              <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
             <div className="flex justify-between border-b border-pure-white/10 py-1.5">
-              <span className="text-pure-white/50">ALGORITHM</span>
-              <span className="font-bold">GCM-POLY1305</span>
+              <span className="text-pure-white/50">BBC iPLAYER</span>
+              <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
             <div className="flex justify-between pt-1.5">
-              <span className="text-pure-white/50">SECURITY LEVEL</span>
-              <span className="font-bold text-cyber-jade">CRITICAL-GRADE</span>
+              <span className="text-pure-white/50">HULU & DISNEY+</span>
+              <span className="font-bold text-cyber-jade">UNBLOCKED</span>
             </div>
           </div>
         </div>
@@ -196,10 +192,10 @@ export default function BentoFeatures() {
               </svg>
             </div>
             <h4 className="font-headline text-lg font-bold text-midnight-slate mb-2">
-              WireGuard Speed
+              Lightning Fast Speeds
             </h4>
             <p className="font-body text-xs text-cool-gray leading-relaxed mb-6">
-              Ultra-lightweight protocol analysis for 2026 performance levels.
+              Optimized servers for 4K streaming, fast torrenting, and lag-free gaming.
             </p>
           </div>
           <div
@@ -250,25 +246,25 @@ export default function BentoFeatures() {
                 </svg>
               </div>
               <h4 className="font-headline text-lg font-bold text-midnight-slate mb-2">
-                Kill Switch
+                Strict No-Logs Policy
               </h4>
               <p className="font-body text-xs text-cool-gray leading-relaxed">
-                Advanced IP Leak testing under extreme reconnection scenarios.
+                What you do online is your business. Top VPNs do not track, collect, or share your private browsing history.
               </p>
             </div>
           </div>
           <div className="md:w-2/3 bg-frost-canvas rounded-inner p-5 font-mono text-[11px] border border-hairline-slate flex flex-col justify-center space-y-3 select-none">
             <div className="flex items-center gap-2 text-cyber-jade">
               <span className="w-2 h-2 bg-cyber-jade rounded-full"></span>
-              <span className="break-all font-semibold">VPN_TUNNEL_DISCONNECT_EVENT_TRIGGERED</span>
+              <span className="break-all font-semibold">BROWSING HISTORY: NOT RECORDED</span>
             </div>
             <div className="flex items-center gap-2 text-cyber-jade">
               <span className="w-2 h-2 bg-cyber-jade rounded-full"></span>
-              <span className="break-all font-semibold">SYSTEM_WIDE_KILL_SWITCH_ENGAGED</span>
+              <span className="break-all font-semibold">IP ADDRESSES: NEVER STORED</span>
             </div>
-            <div className="flex items-center gap-2 text-midnight-slate opacity-40">
-              <span className="w-2 h-2 bg-cool-gray rounded-full"></span>
-              <span className="break-all">TRAFFIC_BLOCKED_WAITING_FOR_HANDSHAKE...</span>
+            <div className="flex items-center gap-2 text-cyber-jade">
+              <span className="w-2 h-2 bg-cyber-jade rounded-full"></span>
+              <span className="break-all font-semibold">INDEPENDENT AUDIT: PASSED</span>
             </div>
           </div>
         </div>

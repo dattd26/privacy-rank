@@ -69,13 +69,13 @@ export default function Header() {
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
             href="#compare"
           >
-            Compare VPNs
+            VPN Reviews
           </a>
           <a
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
             href="#features"
           >
-            Security Tools
+            Best VPNs
           </a>
           <a
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
@@ -87,7 +87,7 @@ export default function Header() {
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
             href="#footer"
           >
-            About
+            About Us
           </a>
         </nav>
 
@@ -144,14 +144,14 @@ export default function Header() {
             href="#compare"
             onClick={() => setIsOpen(false)}
           >
-            Compare VPNs
+            VPN Reviews
           </a>
           <a
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
             href="#features"
             onClick={() => setIsOpen(false)}
           >
-            Security Tools
+            Best VPNs
           </a>
           <a
             className="text-midnight-slate hover:text-electric-cobalt transition-colors font-body text-sm font-medium"
@@ -165,7 +165,7 @@ export default function Header() {
             href="#footer"
             onClick={() => setIsOpen(false)}
           >
-            About
+            About Us
           </a>
           <Button
             variant="outline"

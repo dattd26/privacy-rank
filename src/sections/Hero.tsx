@@ -92,13 +92,13 @@ export default function Hero() {
       {/* Left Column */}
       <div ref={leftContentRef} className="lg:col-span-6 flex flex-col items-start">
         <div className="inline-flex items-center px-3 py-1 bg-ice-wash border border-cobalt-glare/20 rounded-full text-electric-cobalt font-mono text-[11px] font-semibold tracking-wider mb-6 uppercase select-none">
-          VERIFIED SECURITY LAB INDEX
+          TOP VPN RATINGS & REVIEWS
         </div>
         <h1 className="font-headline text-[40px] md:text-[52px] leading-[1.1] font-extrabold text-midnight-slate tracking-tight mb-6">
-          The Definitive Privacy Index for 2026.
+          The Best VPN Services for 2026.
         </h1>
         <p className="font-body text-[16px] md:text-[18px] leading-relaxed text-cool-gray mb-8 max-w-xl">
-          We stress-test, audit, and rank VPN networks. Transparent metrics. Zero provider influence. Our analytical laboratory ensures digital sovereignty through high-precision cybersecurity reviews.
+          We test and compare the top VPNs so you don't have to. Find the perfect VPN for streaming, fast gaming, and complete online privacy without the technical jargon.
         </p>
         <div className="flex items-center gap-4">
           <Button
@@ -131,7 +131,7 @@ export default function Hero() {
               <span className="w-2.5 h-2.5 bg-cyber-jade rounded-full animate-ping absolute inline-flex"></span>
               <span className="w-2.5 h-2.5 bg-cyber-jade rounded-full relative inline-flex"></span>
               <span className="font-mono text-[11px] font-semibold text-cool-gray uppercase tracking-widest pl-1">
-                Network Status: Protected
+                Top Performer 2026
               </span>
             </div>
             <svg
@@ -154,18 +154,18 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-frost-canvas p-4 rounded-inner border border-hairline-slate">
                 <p className="text-[11px] font-body text-cool-gray uppercase font-semibold mb-1">
-                  Encryption
+                  Streaming Score
                 </p>
                 <p className="font-mono text-base font-bold text-midnight-slate">
-                  AES-256-GCM
+                  99/100
                 </p>
               </div>
               <div className="bg-frost-canvas p-4 rounded-inner border border-hairline-slate">
                 <p className="text-[11px] font-body text-cool-gray uppercase font-semibold mb-1">
-                  Tunnel Protocol
+                  Speed Test
                 </p>
                 <p className="font-mono text-base font-bold text-midnight-slate">
-                  WireGuard v2
+                  Ultra Fast
                 </p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Hero() {
               <div>
                 <div className="flex justify-between items-center text-sm mb-1.5">
                   <span className="font-body text-midnight-slate font-medium">
-                    DNS Leak Test
+                    Streaming Unblocking
                   </span>
                   <span className="text-cyber-jade font-mono font-bold">
                     PASSED
@@ -192,10 +192,10 @@ export default function Hero() {
               <div>
                 <div className="flex justify-between items-center text-sm mb-1.5">
                   <span className="font-body text-midnight-slate font-medium">
-                    IPv6 Protection
+                    No-Logs Policy
                   </span>
                   <span className="text-cyber-jade font-mono font-bold">
-                    ENABLED
+                    VERIFIED
                   </span>
                 </div>
                 <div className="w-full bg-hairline-slate h-1.5 rounded-full overflow-hidden">

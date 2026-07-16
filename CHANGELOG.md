@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.3] - 2026-07-16
+
+### Changed
+- Đổi hướng nội dung website từ phong cách "Security Lab" nặng về kỹ thuật sang phong cách "Top VPN Services" thân thiện với người dùng phổ thông.
+- Cập nhật phần Hero (`Hero.tsx`): Đổi tiêu đề và đoạn mô tả tập trung vào lợi ích cho người dùng (streaming, gaming, privacy). Làm gọn các thông số kỹ thuật ở widget (Streaming Score, Speed Test, No-Logs Verified).
+- Cập nhật phần Bento Grid (`BentoFeatures.tsx`): Thay thế các tính năng mã hóa chuyên sâu bằng 4 lợi ích thiết thực nhất (One-Click Privacy, Global Streaming, Fast Speeds, và No-Logs Policy).
+- Cập nhật Header (`Header.tsx`): Đổi các liên kết điều hướng sang các cụm từ phổ thông hơn (VPN Reviews, Best VPNs, Guides, About Us).
+
 ## [1.0.2] - 2026-07-16
 
 ### Added
