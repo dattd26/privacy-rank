@@ -17,22 +17,24 @@ Tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: 
 *   **ExpressVPN (Spacious Authority)**: Bài học về việc phân bổ luồng thông tin so sánh thông minh. Sử dụng bảng xếp hạng VPN trực quan với các điểm nhấn (Pros/Cons), thông tin giá ưu đãi và các nhãn "Editor's Choice" nổi bật giúp người dùng đưa ra quyết định nhanh nhất.
 
 **Quyết định áp dụng cho PrivacyRank**:
-*   Xây dựng giao diện theo trường phái **Clinical Modernism** (Phòng thí nghiệm phân tích số).
-*   Sử dụng nền phẳng sáng **Frost Canvas** (`#f8fafc`) và các card thông tin màu trắng (`#ffffff`) với viền hairline mỏng (`#e2e8f0`) để tạo không gian sạch sẽ, bảo mật.
-*   Chỉ sử dụng duy nhất màu **Electric Cobalt** (`#1d4ed8`) làm màu nhấn hành động (primary CTA color) để điều hướng hành vi bấm nút một cách rõ rệt nhất.
+*   Xây dựng giao diện theo phong cách **Top VPN Services** (Thân thiện, hiện đại).
+*   Sử dụng nền phẳng sáng **Frost Canvas** (![](https://placehold.co/15x15/f8fafc/f8fafc.png) `#f8fafc`) và các card thông tin màu trắng (![](https://placehold.co/15x15/ffffff/ffffff.png) `#ffffff`) với viền hairline mỏng (`#e2e8f0`) để tạo không gian sạch sẽ, bảo mật.
+*   Sử dụng màu **Electric Cobalt** (![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) `#1d4ed8`) làm màu nhấn hành động chính (primary CTA color) để điều hướng hành vi bấm nút một cách rõ rệt nhất.
+
 
 ---
 
 ## 2. Hệ thống Thiết kế (Design System)
 
-Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CNPM/TopVPNServices2026/docs/design.md):
+Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CNPM/TopVPNServices2026/privacy-rank/docs/design.md):
 
 *   **Bảng màu (Colors)**:
-    *   *Midnight Slate* (`#090d16`): Màu chữ chính và các đường nét điều hướng cốt lõi (thay vì màu đen thuần túy để giao diện tinh tế hơn).
-    *   *Frost Canvas* (`#f8fafc`): Nền trang web mát lạnh.
-    *   *Electric Cobalt* (`#1d4ed8`): Màu hành động chính, nút bấm, liên kết tích cực.
-    *   *Cyber Jade* (`#10b981`): Điểm cộng (Pros), chỉ số tốc độ tốt, badge an toàn.
-    *   *Signal Crimson* (`#ef4444`): Điểm trừ (Cons), rò rỉ bảo mật, IP leaks.
+    *   ![](https://placehold.co/15x15/090d16/090d16.png) *Midnight Slate* (`#090d16`): Màu chữ chính và các đường nét điều hướng cốt lõi (thay vì màu đen thuần túy để giao diện tinh tế hơn).
+    *   ![](https://placehold.co/15x15/f8fafc/f8fafc.png) *Frost Canvas* (`#f8fafc`): Nền trang web mát lạnh.
+    *   ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) *Electric Cobalt* (`#1d4ed8`): Màu hành động chính, nút bấm, liên kết tích cực.
+    *   ![](https://placehold.co/15x15/10b981/10b981.png) *Cyber Jade* (`#10b981`): Điểm cộng (Pros), chỉ số tốc độ tốt, badge an toàn.
+    *   ![](https://placehold.co/15x15/ef4444/ef4444.png) *Signal Crimson* (`#ef4444`): Điểm trừ (Cons), rò rỉ bảo mật, IP leaks.
+
 *   **Quy tắc Bo góc đồng nhất (Shape Consistency Lock)**:
     *   Nút bấm (buttons) và ô nhập liệu (inputs) được khóa ở góc bo tròn **8px** (`rounded-btn`/`rounded-inner`) để tạo cảm giác vững chãi, chắc chắn của công cụ an ninh.
     *   Các thẻ container (cards) được bo góc **16px** (`rounded-card`).
@@ -43,7 +45,7 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 
 ---
 
-## 3. Giải thích Quyết định Thiết kế (Yêu cầu 5 của Bài Test)
+## 3. Giải thích Quyết định Thiết kế
 
 ### 3.1. Vì sao chọn bảng màu này?
 *   Chúng tôi chọn **Electric Cobalt** kết hợp với **Midnight Slate** trên nền **Frost Canvas** vì đây là bảng màu đặc trưng của các tổ chức kiểm định an ninh mạng độc lập. Nó mang tính trung lập, đáng tin cậy và khoa học.
@@ -56,16 +58,13 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 *   `JetBrains Mono` đóng vai trò cực kỳ quan trọng trong việc truyền tải thông điệp "Dữ liệu được kiểm chứng". Khi người dùng nhìn thấy điểm số `9.8` hay tốc độ `984 Mbps` dưới dạng font monospace, họ sẽ liên tưởng ngay đến các báo cáo kỹ thuật từ các kỹ sư mạng, nâng cao tính trung thực của bài viết review.
 
 ### 3.3. Bạn lấy cảm hứng từ những nguồn nào?
-*   *NEVERHACK*: Cảm hứng về bố cục bất đối xứng, đường kẻ mỏng hairline slate chia cắt không gian, và sự tiết chế tối đa việc đổ bóng card.
-*   *ExpressVPN*: Cấu trúc luồng thông tin so sánh VPN, cách thiết kế pros/cons và việc thiết lập nhãn "Editor's Choice".
-*   *Proton*: Phong cách thiết kế sạch sẽ, tinh giản của Thụy Sĩ, tập trung vào quyền riêng tư số.
+*   *NEVERHACK*: Cảm hứng về bố cục bất đối xứng, đường kẻ mỏng chia cắt không gian, và sự tiết chế tối đa việc đổ bóng card.
+*   *ExpressVPN*: Thông tin so sánh VPN, cách trình bày điểm tốt/điểm không tốt của các VPN và việc thiết lập nhãn "Editor's Choice" tạo sự tin cậy.
 
 ### 3.4. Nếu có thêm thời gian, bạn sẽ cải thiện gì?
 *   **Deep-dive Comparison**: Triển khai thêm trang so sánh chi tiết, cho phép người dùng tick chọn 2-3 VPN và hiển thị một bảng so sánh kỹ thuật kéo dài (gồm loại server, giao thức mã hóa cụ thể, hỗ trợ thanh toán crypto, v.v.).
 *   **Interactive Performance Graphs**: Thay vì các thanh tiến trình tĩnh, tôi sẽ sử dụng GSAP để vẽ biểu đồ đường SVG thể hiện biến thiên tốc độ thực tế của VPN theo các khung giờ trong ngày.
 *   **Dark Mode Toggle**: Triển khai hệ thống chuyển đổi Dark/Light mode mượt mà bằng GSAP.
-*   **SEO Schema Markup**: Cấu trúc dữ liệu JSON-LD chuẩn `Product` và `Review` để hiển thị điểm sao đánh giá trực tiếp trên kết quả tìm kiếm Google.
-
 ---
 
 ## 4. Tư duy Triển khai & Cấu trúc (Dev Thinking)
@@ -73,34 +72,32 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 Mã nguồn được triển khai bằng **Next.js (App Router)** và **Tailwind CSS v4** kết hợp với **GSAP (và `@gsap/react`)** cho các chuyển động tương tác.
 
 ### Cấu trúc Component
-Chi tiết tại [docs/architecture.md](file:///d:/CNPM/TopVPNServices2026/docs/architecture.md):
-*   `Header`: Thanh điều hướng cố định (72px), co giãn nhẹ và thêm bóng khi cuộn trang. Hỗ trợ hamburger menu trên thiết bị di động.
-*   `Hero`: Sử dụng bố cục bất đối xứng (asymmetric). Cột trái là tiêu đề H1 và CTA. Cột phải là một "Real-time Security Analyzer Widget" mô phỏng việc stress-test kết nối với các hiệu ứng chạy thanh phần trăm và đếm số ping bằng GSAP.
-*   `ComparisonTable`: Xếp hạng Top 3 VPN. Hiển thị điểm số dạng tiến trình lab-grade. Thẻ ngang tự động responsive sang dạng dọc trên di động để triệt tiêu việc cuộn ngang (horizontal overflow).
-*   `BentoFeatures`: Bento Grid 4 ô giới thiệu 4 tính năng cốt lõi (No-Logs, Encryption, WireGuard, Kill Switch) với các hiệu ứng biểu đồ và dòng lệnh terminal chuyển động mượt mà.
+Chi tiết tại [docs/architecture.md](file:///d:/CNPM/TopVPNServices2026/privacy-rank/docs/architecture.md):
+*   `Header`: Thanh điều hướng cố định (72px), co giãn nhẹ và thêm bóng khi cuộn trang. Hỗ trợ hamburger menu trên thiết bị di động và các liên kết thân thiện với người dùng (VPN Reviews, Best VPNs, Guides, About Us).
+*   `Hero`: Sử dụng bố cục bất đối xứng (asymmetric). Cột trái là tiêu đề H1 và CTA. Cột phải là một "Thẻ xếp hạng VPN số #1 (NordVPN)" trực quan với điểm số, số sao, các tính năng chính và nút xem đánh giá đi kèm hiệu ứng đếm số & hiện dần bằng GSAP.
+*   `ComparisonTable`: Xếp hạng 10 VPN hàng đầu. Hiển thị mặc định 5 VPN đầu tiên và hỗ trợ ẩn/hiện danh sách bằng nút "Show More / Show Less" thiết kế kiểu capsule cao cấp. Thẻ ngang tự động responsive sang dạng dọc trên di động. Tích hợp Popup Modal "Get Deal" tặng coupon ngẫu nhiên và hỗ trợ copy tự động.
+*   `BentoFeatures`: Bento Grid 4 ô giới thiệu 4 lợi ích thiết thực nhất (One-Click Privacy, Global Streaming, Fast Speeds, và No-Logs Policy) với chuyển động mượt mà bằng GSAP.
 *   `FAQ`: Accordion các câu hỏi thường gặp, sử dụng GSAP animate chiều cao `height` mượt mà khi mở/đóng.
 *   `Footer`: Thông tin bản quyền và tuyên bố miễn trừ trách nhiệm (Affiliate Disclosure).
+
 
 ---
 
 ## 5. Hướng dẫn Khởi chạy Dự án Local
 
-Dự án mã nguồn Next.js được đặt tại thư mục con `privacy-rank`.
+Dự án Next.js nằm tại thư mục gốc của repository (thư mục chứa tệp `package.json` này).
 
-1.  **Di chuyển vào thư mục dự án**:
-    ```bash
-    cd privacy-rank
-    ```
-2.  **Cài đặt thư viện phụ thuộc**:
+1.  **Cài đặt thư viện phụ thuộc**:
     ```bash
     npm install
     ```
-3.  **Khởi chạy môi trường Phát triển (Development)**:
+2.  **Khởi chạy môi trường Phát triển (Development)**:
     ```bash
     npm run dev
     ```
     *Giao diện sẽ chạy tại địa chỉ: [http://localhost:3000](http://localhost:3000)*
-4.  **Kiểm tra Build Production**:
+3.  **Kiểm tra Build Production**:
     ```bash
     npm run build
     ```
+

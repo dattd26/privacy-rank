@@ -9,22 +9,23 @@ PrivacyRank operates in a highly-credible, conversion-oriented cyber security re
 
 ## Tokens — Colors
 
-| Name | Value | Token | Role |
-|------|-------|-------|------|
-| **Midnight Slate** | `#090d16` | `--color-midnight-slate` | Primary text, headlines, structural lines, nav — a deep near-black navy that anchors the page with maximum readability and authority |
-| **Pure White** | `#ffffff` | `--color-pure-white` | Card surfaces, elevated panels, navigation background, active toggles |
-| **Frost Canvas** | `#f8fafc` | `--color-frost-canvas` | Base page background, soft off-white canvas with a cool cast that lets white cards read as elevated |
-| **Hairline Slate** | `#e2e8f0` | `--color-hairline-slate` | Structural dividers, card borders, table separators — clean, faint slate lines |
-| **Cool Gray** | `#64748b` | `--color-cool-gray` | Secondary body text, captions, inactive states, icons |
-| **Electric Cobalt** | `#1d4ed8` | `--color-electric-cobalt` | Primary accent color, active buttons, key links, brand indicators — solid royal blue that commands trust |
-| **Cobalt Glare** | `#3b82f6` | `--color-cobalt-glare` | High-light stroke, subtle button borders, active text highlights |
-| **Ice Wash** | `#eff6ff` | `--color-ice-wash` | Soft ice-blue wash background for tags, badges, and background highlights |
-| **Cyber Jade** | `#10b981` | `--color-cyber-jade` | Positive badges, high-performance speeds, verified checkmarks, security wins, "Pros" lists |
-| **Jade Wash** | `#ecfdf5` | `--color-jade-wash` | Light green wash for verified tags and positive status indicators |
-| **Signal Crimson** | `#ef4444` | `--color-signal-crimson` | Negative badges, critical security warnings, IP leaks, "Cons" lists, discount flags |
-| **Crimson Wash** | `#fef2f2` | `--color-crimson-wash` | Light red wash for cons, emergency notices, and alert blocks |
-| **Warning Amber** | `#f59e0b` | `--color-warning-amber` | Rating scores, medium stats, caution notices |
-| **Amber Wash** | `#fffbeb` | `--color-amber-wash` | Light amber wash background |
+| Name | Value | Preview | Token | Role |
+|------|-------|---------|-------|------|
+| **Midnight Slate** | `#090d16` | ![](https://placehold.co/15x15/090d16/090d16.png) | `--color-midnight-slate` | Primary text, headlines, structural lines, nav — a deep near-black navy that anchors the page with maximum readability and authority |
+| **Pure White** | `#ffffff` | ![](https://placehold.co/15x15/ffffff/ffffff.png) | `--color-pure-white` | Card surfaces, elevated panels, navigation background, active toggles |
+| **Frost Canvas** | `#f8fafc` | ![](https://placehold.co/15x15/f8fafc/f8fafc.png) | `--color-frost-canvas` | Base page background, soft off-white canvas with a cool cast that lets white cards read as elevated |
+| **Hairline Slate** | `#e2e8f0` | ![](https://placehold.co/15x15/e2e8f0/e2e8f0.png) | `--color-hairline-slate` | Structural dividers, card borders, table separators — clean, faint slate lines |
+| **Cool Gray** | `#64748b` | ![](https://placehold.co/15x15/64748b/64748b.png) | `--color-cool-gray` | Secondary body text, captions, inactive states, icons |
+| **Electric Cobalt** | `#1d4ed8` | ![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) | `--color-electric-cobalt` | Primary accent color, active buttons, key links, brand indicators — solid royal blue that commands trust |
+| **Cobalt Glare** | `#3b82f6` | ![](https://placehold.co/15x15/3b82f6/3b82f6.png) | `--color-cobalt-glare` | High-light stroke, subtle button borders, active text highlights |
+| **Ice Wash** | `#eff6ff` | ![](https://placehold.co/15x15/eff6ff/eff6ff.png) | `--color-ice-wash` | Soft ice-blue wash background for tags, badges, and background highlights |
+| **Cyber Jade** | `#10b981` | ![](https://placehold.co/15x15/10b981/10b981.png) | `--color-cyber-jade` | Positive badges, high-performance speeds, verified checkmarks, security wins, "Pros" lists |
+| **Jade Wash** | `#ecfdf5` | ![](https://placehold.co/15x15/ecfdf5/ecfdf5.png) | `--color-jade-wash` | Light green wash for verified tags and positive status indicators |
+| **Signal Crimson** | `#ef4444` | ![](https://placehold.co/15x15/ef4444/ef4444.png) | `--color-signal-crimson` | Negative badges, critical security warnings, IP leaks, "Cons" lists, discount flags |
+| **Crimson Wash** | `#fef2f2` | ![](https://placehold.co/15x15/fef2f2/fef2f2.png) | `--color-crimson-wash` | Light red wash for cons, emergency notices, and alert blocks |
+| **Warning Amber** | `#f59e0b` | ![](https://placehold.co/15x15/f59e0b/f59e0b.png) | `--color-warning-amber` | Rating scores, medium stats, caution notices |
+| **Amber Wash** | `#fffbeb` | ![](https://placehold.co/15x15/fffbeb/fffbeb.png) | `--color-amber-wash` | Light amber wash background |
+
 
 ---
 

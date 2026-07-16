@@ -12,7 +12,7 @@ export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const leftContentRef = useRef<HTMLDivElement>(null);
   const rightWidgetRef = useRef<HTMLDivElement>(null);
-  
+
   const scoreValRef = useRef<HTMLSpanElement>(null);
   const starsRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -159,16 +159,27 @@ export default function Hero() {
           </div>
 
           {/* Logo & Title */}
-          <div className="flex items-center gap-4 mb-6">
-            <div
-              className="w-12 h-12 bg-contain bg-no-repeat bg-center rounded-inner p-1 border border-hairline-slate"
-              style={{ backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/NordVPN_logo.svg/1920px-NordVPN_logo.svg.png?_=20220226150306')` }}
-            ></div>
+          <div className="flex items-center gap-5 mb-6">
+            {/* Khung chứa logo được tối ưu: chuyển từ khung vuông sang khung chữ nhật dẹt (w-24 h-14) */}
+            <div className="relative w-24 h-14 flex items-center justify-center bg-slate-50/50 rounded-xl p-2 border border-hairline-slate shadow-sm hover:border-blue-200 transition-colors">
+              {/* Huy hiệu Gold Badge cho Rank 1 */}
+              <span className="absolute -top-2 -left-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-[10px] font-black text-white px-2 py-0.5 rounded-full shadow-sm uppercase tracking-wider select-none z-10">
+                #1
+              </span>
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/NordVPN_logo.svg/1920px-NordVPN_logo.svg.png?_=20220226150306"
+                alt="NordVPN Logo"
+                className="w-full h-full object-contain filter drop-shadow-[0_1px_1px_rgba(0,0,0,0.05)]"
+              />
+            </div>
+
             <div>
-              <h3 className="font-headline text-2xl font-extrabold text-midnight-slate tracking-tight">
+              <h3 className="font-headline text-2xl font-extrabold text-midnight-slate tracking-tight flex items-center gap-2">
                 NordVPN
               </h3>
-              <p className="text-xs font-semibold text-cool-gray uppercase tracking-widest">
+              <p className="text-xs font-semibold text-cool-gray uppercase tracking-widest flex items-center gap-1">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 Top Rated Provider
               </p>
             </div>

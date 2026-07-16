@@ -48,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-07-16
 
 ### Added
-- Completed core source code implementation for the **PrivacyRank** homepage in the `privacy-rank/` directory using Next.js (App Router), Tailwind CSS v4, and GSAP.
+- Completed core source code implementation for the **PrivacyRank** homepage at the root directory using Next.js (App Router), Tailwind CSS v4, and GSAP.
 - Added `@phosphor-icons/react` and `@gsap/react` dependencies for premium icons and high-performance React animations.
 - Created reusable components and layout sections:
   - `src/components/Button.tsx`: reusable button with transitions and contrast standards.

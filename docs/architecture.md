@@ -14,26 +14,25 @@ We follow a clean, modular Next.js (App Router) structure separating documentati
 │   ├── research.md
 │   ├── design.md
 │   └── architecture.md
-├── privacy-rank/             # Next.js React Project
-│   ├── public/               # Static assets (images, favicon, logo)
-│   ├── src/
-│   │   ├── components/       # Reusable UI components (Button, Badge)
-│   │   │   └── Button.tsx
-│   │   ├── sections/         # Page-specific modular layout sections
-│   │   │   ├── Header.tsx
-│   │   │   ├── Hero.tsx
-│   │   │   ├── ComparisonTable.tsx
-│   │   │   ├── BentoFeatures.tsx
-│   │   │   ├── FAQ.tsx
-│   │   │   └── Footer.tsx
-│   │   ├── app/              # Next.js App Router routes & styles
-│   │   │   ├── globals.css
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   ├── tsconfig.json
-│   ├── tailwind.config.ts
-│   ├── package.json
-│   └── next.config.ts
+├── public/                   # Static assets (images, favicon, logo)
+├── src/
+│   ├── components/           # Reusable UI components (Button, Badge)
+│   │   └── Button.tsx
+│   ├── sections/             # Page-specific modular layout sections
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── ComparisonTable.tsx
+│   │   ├── ComparisonTable.css
+│   │   ├── BentoFeatures.tsx
+│   │   ├── FAQ.tsx
+│   │   └── Footer.tsx
+│   ├── app/                  # Next.js App Router routes & styles
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+├── tsconfig.json
+├── package.json
+├── next.config.ts
 ├── CHANGELOG.md
 ├── README.md
 └── PROJECT_CONTEXT.md
@@ -63,10 +62,11 @@ graph TD
 ### Component Roles:
 1.  **`Header`**: Fixed-height navigation bar (capped at `72px`). Dynamic active link styling, and single-line layout on desktop. Collapses into a hamburger menu on mobile.
 2.  **`Hero`**: Asymmetric presentation with value proposition (H1), subtext, and quick trust CTA buttons. Displays a preview of the Editor's choice or a high-quality product abstract visual.
-3.  **`ComparisonTable`**: The conversion engine. Contains a list of `VPNCard`s. It's a grid on desktop but transforms dynamically on mobile.
-4.  **`VPNCard`**: Represents a single VPN provider (Rank, Logo, Score, Key Specs, Pros/Cons, and CTA).
-5.  **`BentoFeatures`**: A multi-cell grid highlighting cybersecurity benefits (encryption, speed protocols, server coverage, bypass blocks). Uses varying cell shapes and visual assets to maintain rhythm.
-6.  **`FAQ`**: An accordion-based component providing quick, scannable answers to common VPN questions, boosting SEO.
+3.  **`ComparisonTable`**: The conversion engine. Contains a list of 10 VPN services, displaying 5 by default with a "Show More / Show Less" toggle. It transforms dynamically on mobile.
+4.  **`VPNCard`**: Represents a single VPN provider (Rank, Logo, Score, Key Specs, Pros/Cons, and CTA) and supports "Get Deal" click-to-copy discount modal popups.
+5.  **`BentoFeatures`**: A multi-cell grid highlighting user-centric benefits (One-Click Privacy, Global Streaming, Fast Speeds, and No-Logs Policy) with custom visual animations.
+6.  **`FAQ`**: An accordion-based component providing quick, scannable answers to common VPN questions with smooth GSAP open/close height animations, boosting SEO.
+
 
 ---
 
