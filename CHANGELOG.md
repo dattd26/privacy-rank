@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.4] - 2026-07-16
+
+### Changed
+- Thiết kế lại các nhãn năng lực (capability tags) trong bảng so sánh VPN (`ComparisonTable.tsx`) lấy cảm hứng từ ngôn ngữ thiết kế tối giản của ExpressVPN.
+- Tạo tệp CSS riêng `src/sections/ComparisonTable.css` định nghĩa chi tiết nhãn capability với các cặp màu lục/đỏ sẫm và nền nhạt đạt chỉ số tương phản cao của chuẩn WCAG 2.2 AA.
+- Bổ sung hiệu ứng di chuột (micro-animations) mượt mà giúp giao diện sống động và trực quan hơn.
+
 ## [1.0.3] - 2026-07-16
 
 ### Changed

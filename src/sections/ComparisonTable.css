@@ -1,0 +1,54 @@
+/* Style foundations and tokens based on ExpressVPN guidelines */
+.capability-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6.4px; /* space.4 = 6.4px */
+  padding: 5px 9px; /* space.3 = 5px (vertical), space.5 = 9px (horizontal) */
+  border-radius: 10px; /* radius.sm = 10px */
+  font-family: 'Inter', var(--font-body), sans-serif;
+  font-size: 12px; /* font.size.sm = 12px */
+  font-weight: 600; /* font.weight.semibold */
+  line-height: 1;
+  user-select: none;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); /* motion.duration.instant = 250ms */
+}
+
+/* Micro-animations: dynamic hover lift and subtle shadow */
+.capability-tag:hover {
+  transform: translateY(-1.5px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px 0px;
+}
+
+/* Positive features: Forest Green style with high contrast (WCAG 2.2 AA compliant) */
+.capability-tag-positive {
+  background-color: #ebf7ed; /* Light green wash */
+  border-color: #ceead6; /* Light green border */
+  color: #137333; /* Deep emerald green */
+}
+
+.capability-tag-positive:hover {
+  background-color: #e1f3e7;
+  border-color: #b8e2c3;
+  color: #0f5b2b;
+}
+
+/* Negative/Limitation features: Crimson Brick style with high contrast */
+.capability-tag-negative {
+  background-color: #fdf2f2; /* Light crimson wash */
+  border-color: #fad2cf; /* Light crimson border */
+  color: #c5221f; /* ExpressVPN distinctive brick red */
+}
+
+.capability-tag-negative:hover {
+  background-color: #fbe6e6;
+  border-color: #f7b7b2;
+  color: #a81c19;
+}
+
+/* Focus visibility fallback */
+.capability-tag:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}

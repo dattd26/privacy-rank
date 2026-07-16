@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./ComparisonTable.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -430,15 +431,15 @@ export default function ComparisonTable() {
                   {vpn.capabilities.map((cap) => (
                     <div
                       key={cap.label}
-                      className={`flex items-center gap-1.5 px-2 py-1 rounded-inner text-xs font-semibold select-none ${
+                      className={`capability-tag ${
                         cap.isPositive
-                          ? "text-cyber-jade bg-jade-wash"
-                          : "text-signal-crimson bg-crimson-wash"
+                          ? "capability-tag-positive"
+                          : "capability-tag-negative"
                       }`}
                     >
                       {cap.isPositive ? (
                         <svg
-                          className="w-3.5 h-3.5"
+                          className="w-3.5 h-3.5 shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -453,7 +454,7 @@ export default function ComparisonTable() {
                         </svg>
                       ) : (
                         <svg
-                          className="w-3.5 h-3.5"
+                          className="w-3.5 h-3.5 shrink-0"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -467,7 +468,7 @@ export default function ComparisonTable() {
                           />
                         </svg>
                       )}
-                      {cap.label}
+                      <span>{cap.label}</span>
                     </div>
                   ))}
                 </div>
