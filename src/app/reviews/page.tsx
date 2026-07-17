@@ -5,13 +5,16 @@ import Link from "next/link";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import Button from "../../components/Button";
 import DealModal, { DealData } from "../../components/DealModal";
+import Pagination from "../../components/Pagination";
 import { reviewsData, ReviewData } from "../../data/reviews";
 
 export default function ReviewsPage() {
   const [selectedOS, setSelectedOS] = useState<string>("All");
   const [activeDeal, setActiveDeal] = useState<DealData | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   const osList = ["All", "Windows", "Mac", "Android", "iOS"];
+  const itemsPerPage = 3;
 
   const getBadgeForOS = (vpnName: string, os: string) => {
     if (os === "All") {
@@ -61,7 +64,10 @@ export default function ReviewsPage() {
           {osList.map((os) => (
             <button
               key={os}
-              onClick={() => setSelectedOS(os)}
+              onClick={() => {
+                setSelectedOS(os);
+                setCurrentPage(1);
+              }}
               className={`px-4 py-2 text-xs font-body font-semibold rounded-full border transition-all duration-200 cursor-pointer ${
                 selectedOS === os
                   ? "bg-electric-cobalt border-electric-cobalt text-pure-white shadow-subtle"
@@ -74,8 +80,8 @@ export default function ReviewsPage() {
         </div>
 
         {/* Reviews List */}
-        <div className="space-y-6">
-          {reviewsData.map((vpn) => (
+        <div id="reviews-list-container" className="space-y-6">
+          {reviewsData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((vpn) => (
             <div
               key={vpn.slug}
               className="bg-pure-white border border-hairline-slate rounded-card p-6 shadow-subtle flex flex-col md:flex-row gap-6 md:gap-8 items-center hover:border-cool-gray/40 hover:shadow-floating transition-all duration-300"
@@ -162,6 +168,17 @@ export default function ReviewsPage() {
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={Math.ceil(reviewsData.length / itemsPerPage)}
+          totalItems={reviewsData.length}
+          itemsPerPage={itemsPerPage}
+          onPageChange={setCurrentPage}
+          scrollTargetId="reviews-list-container"
+          className="mt-12"
+        />
       </div>
 
       {/* Premium Deal Modal/Popup */}

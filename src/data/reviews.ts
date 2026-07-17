@@ -300,5 +300,89 @@ export const reviewsData: ReviewData[] = [
     ],
     sections: [],
     faqs: []
+  },
+  {
+    slug: "expressvpn-1",
+    name: "ExpressVPN",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/ExpressVPN-logo.svg/1920px-ExpressVPN-logo.svg.png?_=20210118095637",
+    title: "ExpressVPN Review 2026: Ultra-Premium Security at a Premium Price",
+    subtitle: "Is the custom Lightway protocol and military-grade privacy worth the premium subscription cost?",
+    summary: "ExpressVPN remains an outstanding premium option for absolute reliability and security. Powered by its proprietary Lightway protocol and TrustedServer technology, it excels in server speed, consistency, and bypassing censorship, although it comes at a significantly higher price tag than competitors.",
+    overallScore: 9.4,
+    price: "$6.67/mo",
+    dealUrl: "https://expressvpn.com",
+    publishedAt: "July 10, 2026",
+    author: "Alexander Mercer (Lead Cybersecurity Analyst)",
+    readTime: "7 min read",
+    ratings: [
+      { category: "Speed & Reliability", score: 9.3 },
+      { category: "Security & Encryption", score: 9.8 },
+      { category: "Privacy & Policy", score: 9.8 },
+      { category: "Unblocking & Streaming", score: 9.5 },
+      { category: "Ease of Use", score: 9.8 },
+      { category: "Value for Money", score: 8.5 }
+    ],
+    specs: [
+      { label: "Jurisdiction", value: "British Virgin Islands (Privacy-first jurisdiction)" },
+      { label: "Server Count", value: "3,000+ servers in 105 countries" },
+      { label: "Logging Policy", value: "No-Logs Policy (Verified by court cases and audits)" },
+      { label: "Protocols", value: "Lightway (Proprietary), OpenVPN, IKEv2" },
+      { label: "Max Connections", value: "8 simultaneous devices" },
+      { label: "Server Tech", value: "TrustedServer Tech (100% RAM-only)" }
+    ],
+    pros: [
+      "Lightway protocol offers exceptional stability and immediate connection times.",
+      "Extremely user-friendly applications for routers, smart TVs, and consoles.",
+      "RAM-only servers verified by court cases (no logs stored under server seizures).",
+      "Superb consistency in bypassing tough geo-blocks and firewalls."
+    ],
+    cons: [
+      "Substantially higher cost compared to NordVPN and Surfshark.",
+      "Fewer advanced customization options for advanced power users."
+    ],
+    sections: [],
+    faqs: []
+  },
+  {
+    slug: "expressvpn-3",
+    name: "ExpressVPN",
+    logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/ExpressVPN-logo.svg/1920px-ExpressVPN-logo.svg.png?_=20210118095637",
+    title: "ExpressVPN Review 2026: Ultra-Premium Security at a Premium Price",
+    subtitle: "Is the custom Lightway protocol and military-grade privacy worth the premium subscription cost?",
+    summary: "ExpressVPN remains an outstanding premium option for absolute reliability and security. Powered by its proprietary Lightway protocol and TrustedServer technology, it excels in server speed, consistency, and bypassing censorship, although it comes at a significantly higher price tag than competitors.",
+    overallScore: 9.4,
+    price: "$6.67/mo",
+    dealUrl: "https://expressvpn.com",
+    publishedAt: "July 10, 2026",
+    author: "Alexander Mercer (Lead Cybersecurity Analyst)",
+    readTime: "7 min read",
+    ratings: [
+      { category: "Speed & Reliability", score: 9.3 },
+      { category: "Security & Encryption", score: 9.8 },
+      { category: "Privacy & Policy", score: 9.8 },
+      { category: "Unblocking & Streaming", score: 9.5 },
+      { category: "Ease of Use", score: 9.8 },
+      { category: "Value for Money", score: 8.5 }
+    ],
+    specs: [
+      { label: "Jurisdiction", value: "British Virgin Islands (Privacy-first jurisdiction)" },
+      { label: "Server Count", value: "3,000+ servers in 105 countries" },
+      { label: "Logging Policy", value: "No-Logs Policy (Verified by court cases and audits)" },
+      { label: "Protocols", value: "Lightway (Proprietary), OpenVPN, IKEv2" },
+      { label: "Max Connections", value: "8 simultaneous devices" },
+      { label: "Server Tech", value: "TrustedServer Tech (100% RAM-only)" }
+    ],
+    pros: [
+      "Lightway protocol offers exceptional stability and immediate connection times.",
+      "Extremely user-friendly applications for routers, smart TVs, and consoles.",
+      "RAM-only servers verified by court cases (no logs stored under server seizures).",
+      "Superb consistency in bypassing tough geo-blocks and firewalls."
+    ],
+    cons: [
+      "Substantially higher cost compared to NordVPN and Surfshark.",
+      "Fewer advanced customization options for advanced power users."
+    ],
+    sections: [],
+    faqs: []
   }
 ];

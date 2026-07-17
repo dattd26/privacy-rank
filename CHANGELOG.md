@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2026-07-17
 
 ### Added
+- Tạo component Pagination tái sử dụng (`src/components/Pagination.tsx`) hỗ trợ điều hướng phân trang đẹp mắt, tự động cuộn lên container danh sách review hoặc đầu trang khi thay đổi trang.
+- Thêm tính năng mock pagination cho trang danh sách reviews (`src/app/reviews/page.tsx`) và bổ sung thêm 3 bài đánh giá VPN mock mới (CyberGhost, Proton VPN, PIA) vào dữ liệu nguồn (`src/data/reviews.ts`), hỗ trợ kiểm thử tính năng phân trang một cách trực quan.
 - Tạo route mới `/reviews` hiển thị danh sách các VPN đánh giá, tích hợp Breadcrumbs điều hướng, bộ lọc hệ điều hành trực quan (All, Windows, Mac, Android, iOS), thông tin tóm tắt và nút mở Deal Modal lấy ưu đãi.
 - Tạo route động `/reviews/[slug]` hỗ trợ hiển thị bài đánh giá chuyên sâu. Viết nội dung đánh giá chi tiết chuẩn chuyên gia (American English) cho NordVPN bao gồm: Quick Verdict, Pros & Cons trực quan hóa bằng màu Jade/Crimson, thanh tiến trình rating các hạng mục (Speed, Security, v.v.), bảng thông số kỹ thuật đầy đủ và FAQ Accordion tương tác.
 - Tạo component `Breadcrumbs` (`src/components/Breadcrumbs.tsx`) hỗ trợ điều hướng phân cấp giữa các trang con để tránh người dùng bị rơi vào ngõ cụt.

@@ -16,8 +16,11 @@ We follow a clean, modular Next.js (App Router) structure separating documentati
 │   └── architecture.md
 ├── public/                   # Static assets (images, favicon, logo)
 ├── src/
-│   ├── components/           # Reusable UI components (Button, Badge)
-│   │   └── Button.tsx
+│   ├── components/           # Reusable UI components (Button, Badge, v.v.)
+│   │   ├── Button.tsx
+│   │   ├── Breadcrumbs.tsx
+│   │   ├── DealModal.tsx
+│   │   └── Pagination.tsx
 │   ├── sections/             # Page-specific modular layout sections
 │   │   ├── Header.tsx
 │   │   ├── Hero.tsx
@@ -29,7 +32,11 @@ We follow a clean, modular Next.js (App Router) structure separating documentati
 │   ├── app/                  # Next.js App Router routes & styles
 │   │   ├── globals.css
 │   │   ├── layout.tsx
-│   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   └── reviews/
+│   │       ├── page.tsx
+│   │       └── [slug]/
+│   │           └── page.tsx
 ├── tsconfig.json
 ├── package.json
 ├── next.config.ts
@@ -54,8 +61,15 @@ graph TD
     Page --> Footer[Footer Section]
     
     CompTable --> Button[Button Component]
+    CompTable --> DealModal[DealModal Component]
     Hero --> Button
     Header --> Button
+
+    ReviewsPage[src/app/reviews/page.tsx] --> Header
+    ReviewsPage --> Breadcrumbs[Breadcrumbs Component]
+    ReviewsPage --> Pagination[Pagination Component]
+    ReviewsPage --> DealModal
+    ReviewsPage --> Footer
 ```
 
 
