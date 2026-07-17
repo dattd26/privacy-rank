@@ -47,10 +47,6 @@ export default function ReviewsPage() {
 
         {/* Hero Section */}
         <div className="text-center md:text-left mt-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-cobalt/5 border border-electric-cobalt/15 text-[11px] font-mono font-bold text-electric-cobalt uppercase tracking-wider mb-4">
-            <span className="flex h-2 w-2 rounded-full bg-cyber-jade animate-pulse"></span>
-            Analytic Testing Laboratory
-          </div>
           <h1 className="font-headline text-3xl md:text-4xl font-extrabold text-midnight-slate tracking-tight mb-4">
             Independent VPN Security Reviews & Audits
           </h1>

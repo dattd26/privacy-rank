@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Trophy } from "@phosphor-icons/react";
+import { useRouter } from 'next/navigation';
 
 gsap.registerPlugin(useGSAP);
 
@@ -16,7 +17,7 @@ export default function Hero() {
   const scoreValRef = useRef<HTMLSpanElement>(null);
   const starsRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
-
+  const router = useRouter();
   useGSAP(
     () => {
       // 1. Entrance animation for Left Content
@@ -253,7 +254,7 @@ export default function Hero() {
           {/* Action Button */}
           <Button
             onClick={() => {
-              document.getElementById("compare")?.scrollIntoView({ behavior: "smooth" });
+              router.push('/reviews/nordvpn');
             }}
             className="w-full py-3.5 active:scale-[0.97] transition-all"
           >

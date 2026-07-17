@@ -48,7 +48,7 @@ export default function Header() {
       className="fixed top-0 w-full h-[72px] bg-pure-white border-b border-hairline-slate shadow-subtle z-50 flex items-center"
     >
       <div className="flex justify-between items-center px-8 w-full max-w-7xl mx-auto h-full">
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
           <svg
             className="w-15 h-15 select-none"
             viewBox="0 0 1024 1024"
@@ -81,7 +81,7 @@ export default function Header() {
           <span className="font-headline text-[20px] font-extrabold text-midnight-slate tracking-tight select-none">
             PrivacyRank
           </span>
-        </div>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
