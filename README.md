@@ -11,15 +11,17 @@ Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN
 
 ## 1. Kết quả Nghiên cứu UI/UX (UI Research)
 
-Tôi đã phân tích sâu 2 tài liệu phong cách thiết kế hàng đầu: **NEVERHACK** (phong cách an ninh mạng tối giản) và **ExpressVPN** (thương hiệu VPN uy tín, hiện đại)
+Tôi đã phân tích sâu các tài liệu phong cách thiết kế và trải nghiệm người dùng hàng đầu từ các thương hiệu uy tín: **NEVERHACK**, **ExpressVPN**, và **SafetyDetectives**.
 
-*   **NEVERHACK (Sovereign Cybersecurity)**: Bố cục được chia bằng các đường kẻ mảnh thay vì dùng nhiều card có bóng đổ, kết hợp với font sans-serif đơn giản để tạo cảm giác hiện đại và chuyên nghiệp.
-*   **ExpressVPN (Spacious Authority)**: Tham khảo cách sắp xếp thông tin so sánh VPN rõ ràng và dễ theo dõi. Bảng xếp hạng được trình bày trực quan, kết hợp các mục ưu điểm/nhược điểm (Pros & Cons), giá khuyến mãi và nhãn như "Editor's Choice", giúp người dùng nhanh chóng so sánh và lựa chọn VPN phù hợp.
+*   **[NEVERHACK](https://neverhack.com/) (Sovereign Cybersecurity)**: Bố cục được chia bằng các đường kẻ mảnh thay vì dùng nhiều card có bóng đổ, kết hợp với font sans-serif đơn giản để tạo cảm giác hiện đại và chuyên nghiệp.
+*   **[ExpressVPN](https://www.expressvpn.com/) (Spacious Authority)**: Tham khảo cách sắp xếp thông tin so sánh VPN rõ ràng và dễ theo dõi. Bảng xếp hạng được trình bày trực quan, kết hợp các mục ưu điểm/nhược điểm (Pros & Cons), giá khuyến mãi và nhãn như "Editor's Choice", giúp người dùng nhanh chóng so sánh và lựa chọn VPN phù hợp.
+*   **[SafetyDetectives](https://www.safetydetectives.com/) (Audited Knowledge & Rich Readability)**: Nghiên cứu cách tổ chức hệ thống bài viết đánh giá chi tiết (Reviews Blog) chuẩn SEO. Đặc trưng bởi cấu trúc layout 2 cột khoa học: Cột chính rộng tập trung vào nội dung đọc có tính thuyết phục cao; cột phụ (Sticky Sidebar) chứa tóm tắt thông số kỹ thuật nhanh (Quick Specs) cùng mục lục liên kết nhanh(giúp di chuyển giữa các phần trong trang) giúp người đọc không bị lạc lối. Sử dụng cỡ chữ lớn dễ đọc (base 17px, line-height 27.2px) và các khối Ưu điểm và Nhược điểm trực quan màu sắc, FAQ Accordion tương tác.
 
 **Quyết định áp dụng cho PrivacyRank**:
-*   Xây dựng giao diện theo phong cách **Top VPN Services** (Thân thiện, hiện đại).
-*   Sử dụng nền phẳng sáng **Frost Canvas** (![](https://placehold.co/15x15/f8fafc/f8fafc.png) `#f8fafc`) và các card thông tin màu trắng (![](https://placehold.co/15x15/ffffff/ffffff.png) `#ffffff`) với viền hairline mỏng (`#e2e8f0`) để tạo không gian sạch sẽ, bảo mật.
-*   Sử dụng màu **Electric Cobalt** (![](https://placehold.co/15x15/1d4ed8/1d4ed8.png) `#1d4ed8`) làm màu nhấn hành động chính (primary CTA color) để điều hướng hành vi bấm nút một cách rõ rệt nhất.
+*   Xây dựng giao diện lai hợp giữa **Top VPN Services** (Thân thiện, hiện đại) và **Security Lab** (Kỹ thuật, minh bạch).
+*   Sử dụng nền phẳng sáng **Frost Canvas** (`#f8fafc`) và các card thông tin màu trắng (`#ffffff`) với viền hairline Slate mỏng (`#e2e8f0`) để tạo không gian sạch sẽ, định hình tính bảo mật.
+*   Sử dụng màu **Electric Cobalt** (`#1d4ed8`) làm màu nhấn hành động chính (primary CTA) để định hướng hành vi bấm nút một cách rõ rệt.
+*   **Thiết kế trang Review chi tiết**: Áp dụng layout 2 cột của **SafetyDetectives** cho `/reviews/[slug]` (NordVPN) với sidebar sticky chứa Quick Specs và Table of Contents sử dụng `IntersectionObserver` tự động bắt vị trí cuộn trang. Tối ưu kích thước chữ đọc chính lên `text-base md:text-[17px] leading-relaxed` để tăng cường readability và giảm tỷ lệ thoát trang. Tích hợp Pagination phân trang và Breadcrumbs định hướng để người dùng không rơi vào ngõ cụt.
 
 
 ---
