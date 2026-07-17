@@ -194,7 +194,7 @@ export default function ReviewDetailPage() {
                 Quick Verdict: Our Expert Take
               </h2>
               <div
-                className="font-body text-sm text-midnight-slate leading-relaxed"
+                className="font-body text-base md:text-[17px] text-midnight-slate leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: review.sections[0].content }}
               />
             </section>
@@ -219,7 +219,7 @@ export default function ReviewDetailPage() {
                   </div>
                   <ul className="space-y-3">
                     {review.pros.map((pro, index) => (
-                      <li key={index} className="flex items-start gap-2.5 text-xs font-body text-midnight-slate leading-relaxed">
+                      <li key={index} className="flex items-start gap-2.5 text-sm font-body text-midnight-slate leading-relaxed">
                         <span className="text-cyber-jade font-semibold shrink-0">•</span>
                         <span>{pro}</span>
                       </li>
@@ -241,7 +241,7 @@ export default function ReviewDetailPage() {
                   </div>
                   <ul className="space-y-3">
                     {review.cons.map((con, index) => (
-                      <li key={index} className="flex items-start gap-2.5 text-xs font-body text-midnight-slate leading-relaxed">
+                      <li key={index} className="flex items-start gap-2.5 text-sm font-body text-midnight-slate leading-relaxed">
                         <span className="text-red-500 font-semibold shrink-0">•</span>
                         <span>{con}</span>
                       </li>
@@ -259,7 +259,7 @@ export default function ReviewDetailPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                 {review.ratings.map((rate) => (
                   <div key={rate.category}>
-                    <div className="flex justify-between text-xs mb-1.5 font-bold text-midnight-slate">
+                    <div className="flex justify-between text-sm mb-1.5 font-bold text-midnight-slate">
                       <span className="font-headline">{rate.category}</span>
                       <span className="font-mono text-electric-cobalt">{rate.score} / 10</span>
                     </div>
@@ -281,7 +281,7 @@ export default function ReviewDetailPage() {
                   {sec.title}
                 </h2>
                 <div
-                  className="font-body text-sm text-midnight-slate leading-relaxed"
+                  className="font-body text-base md:text-[17px] text-midnight-slate leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: sec.content }}
                 />
               </section>
@@ -292,11 +292,11 @@ export default function ReviewDetailPage() {
               <h2 className="font-headline text-lg sm:text-xl font-bold text-midnight-slate mb-4 border-l-4 border-electric-cobalt pl-3">
                 Full Technical Specifications
               </h2>
-              <p className="font-body text-xs text-cool-gray mb-4">
+              <p className="font-body text-sm text-cool-gray mb-4">
                 Our lab audits the technical infrastructure of NordVPN directly. Below is the audited system information for their current network release:
               </p>
               <div className="border border-hairline-slate rounded-card overflow-hidden">
-                <table className="w-full text-left font-body text-xs border-collapse">
+                <table className="w-full text-left font-body text-sm border-collapse">
                   <tbody>
                     {review.specs.map((spec, idx) => (
                       <tr key={spec.label} className={idx % 2 === 0 ? "bg-pure-white" : "bg-frost-canvas"}>
@@ -325,7 +325,7 @@ export default function ReviewDetailPage() {
                     <div key={index} className="border border-hairline-slate rounded-card bg-pure-white overflow-hidden transition-all duration-300">
                       <button
                         onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                        className="w-full p-4 flex justify-between items-center text-left font-headline text-xs sm:text-sm font-bold text-midnight-slate hover:bg-frost-canvas/50 transition-colors duration-200 cursor-pointer"
+                        className="w-full p-4 flex justify-between items-center text-left font-headline text-sm sm:text-base font-bold text-midnight-slate hover:bg-frost-canvas/50 transition-colors duration-200 cursor-pointer"
                       >
                         <span>{faq.question}</span>
                         <svg
@@ -344,7 +344,7 @@ export default function ReviewDetailPage() {
                           isOpen ? "max-h-40 border-t border-hairline-slate" : "max-h-0"
                         }`}
                       >
-                        <div className="p-4 font-body text-xs sm:text-sm text-cool-gray leading-relaxed bg-frost-canvas/10">
+                        <div className="p-4 font-body text-sm sm:text-base text-cool-gray leading-relaxed bg-frost-canvas/10">
                           {faq.answer}
                         </div>
                       </div>
@@ -392,7 +392,7 @@ export default function ReviewDetailPage() {
               <h3 className="font-headline text-xs font-bold text-midnight-slate uppercase tracking-wider border-b border-hairline-slate pb-3 mb-3">
                 Quick Specifications
               </h3>
-              <div className="space-y-3 font-body text-[11px]">
+              <div className="space-y-3 font-body text-xs">
                 {review.specs.slice(0, 5).map((spec) => (
                   <div key={spec.label} className="flex justify-between items-start gap-4">
                     <span className="font-semibold text-cool-gray text-left shrink-0">{spec.label}</span>

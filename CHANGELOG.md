@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cập nhật `Header.tsx` sử dụng Next.js `Link` và hook `usePathname` để tự động bôi màu active tương ứng cho link "Home" hoặc "VPN Reviews".
 - Chuyển các anchor link nội bộ trên Header sang dạng `/ #features`, `/ #faq`, v.v. để tự động chuyển về trang chủ và cuộn đến đúng phần khi người dùng click từ trang con.
 - Cập nhật `PROJECT_CONTEXT.md` mô tả cấu trúc đa trang mới.
+- Tối ưu hóa kích thước font chữ (typography scale) trên trang danh sách reviews và trang chi tiết bài viết (sử dụng cỡ chữ base [17px] cho nội dung chính, sm cho pros/cons và specs table, xs/sm cho sidebar và FAQ) nhằm cải thiện khả năng đọc (readability) và ngăn ngừa tỷ lệ rời bỏ trang của độc giả.
 
 ## [1.1.0] - 2026-07-16
 
