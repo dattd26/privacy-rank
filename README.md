@@ -27,7 +27,7 @@ Tôi đã phân tích sâu các tài liệu phong cách thiết kế và trải 
 
 ## 2. Hệ thống Thiết kế (Design System)
 
-Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CNPM/TopVPNServices2026/privacy-rank/docs/design.md):
+Chi tiết thiết kế được ghi nhận tại [docs/design.md](docs/design.md):
 
 *   **Bảng màu (Colors)**:
     *   **Midnight Slate** (`--color-midnight-slate`):
@@ -87,14 +87,23 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 
 Mã nguồn được triển khai bằng **Next.js (App Router)** và **Tailwind CSS v4** kết hợp với **GSAP (và `@gsap/react`)** cho các chuyển động tương tác.
 
-### Cấu trúc Component
-Chi tiết tại [docs/architecture.md](file:///d:/CNPM/TopVPNServices2026/privacy-rank/docs/architecture.md):
-*   `Header`: Thanh điều hướng cố định (72px), co giãn nhẹ và thêm bóng khi cuộn trang. Hỗ trợ hamburger menu trên thiết bị di động và các liên kết thân thiện với người dùng (VPN Reviews, Best VPNs, Guides, About Us).
-*   `Hero`: Sử dụng bố cục bất đối xứng (asymmetric). Cột trái là tiêu đề H1 và CTA. Cột phải là một "Thẻ xếp hạng VPN số #1 (NordVPN)" trực quan với điểm số, số sao, các tính năng chính và nút xem đánh giá đi kèm hiệu ứng đếm số & hiện dần bằng GSAP.
-*   `ComparisonTable`: Xếp hạng 10 VPN hàng đầu. Hiển thị mặc định 5 VPN đầu tiên và hỗ trợ ẩn/hiện danh sách bằng nút "Show More / Show Less" thiết kế kiểu capsule cao cấp. Thẻ ngang tự động responsive sang dạng dọc trên di động. Tích hợp Popup Modal "Get Deal" tặng coupon ngẫu nhiên và hỗ trợ copy tự động.
-*   `BentoFeatures`: Bento Grid 4 ô giới thiệu 4 lợi ích thiết thực nhất (One-Click Privacy, Global Streaming, Fast Speeds, và No-Logs Policy) với chuyển động mượt mà bằng GSAP.
-*   `FAQ`: Accordion các câu hỏi thường gặp, sử dụng GSAP animate chiều cao `height` mượt mà khi mở/đóng.
-*   `Footer`: Thông tin bản quyền và tuyên bố miễn trừ trách nhiệm (Affiliate Disclosure).
+### Cấu trúc Component & Routes
+Chi tiết tại [docs/architecture.md](docs/architecture.md):
+
+#### 1. Các Trang và Route (Routing Structure)
+*   **Trang chủ (`/`)**: Hiển thị bảng so sánh VPN, giới thiệu các tính năng Bento và phần hỏi đáp FAQ.
+*   **Danh sách Đánh giá (`/reviews`)**: Trang danh sách các bài viết đánh giá VPN, hỗ trợ bộ lọc hệ điều hành (All, Windows, Mac, Android, iOS) và phân trang trực quan (Pagination).
+*   **Chi tiết Đánh giá (`/reviews/[slug]`)**: Trang đánh giá chuyên sâu (NordVPN) thiết kế 2 cột với cột nội dung chính bên trái và Sidebar Sticky bên phải chứa thông số kỹ thuật nhanh (Quick Specs) cùng mục lục tự động đồng bộ theo vị trí cuộn trang (Table of Contents). Các VPN khác chưa được viết đầy đủ sẽ hiển thị trạng thái đang kiểm định ("Under Audit").
+
+#### 2. Các Components chính
+*   `Header` & `Footer`: Được đưa vào `layout.tsx` để dùng chung thống nhất trên toàn website.
+*   `Hero`: Sử dụng bố cục bất đối xứng, có thẻ xếp hạng NordVPN kèm hiệu ứng đếm số & hiện dần bằng GSAP.
+*   `ComparisonTable`: So sánh 10 VPN hàng đầu, hỗ trợ Show More/Less mượt mà bằng GSAP.
+*   `BentoFeatures`: Bento Grid giới thiệu các lợi ích bằng chuyển động GSAP.
+*   `FAQ`: Accordion hỏi đáp có chuyển động co giãn chiều cao mượt mà bằng GSAP.
+*   `Breadcrumbs` (`src/components/Breadcrumbs.tsx`): Component điều hướng phân cấp (ví dụ: `Home > Reviews > NordVPN`) giúp người dùng định vị vị trí và dễ dàng quay lại trang trước, tránh bị rơi vào ngõ cụt.
+*   `DealModal` (`src/components/DealModal.tsx`): Component modal nhận coupon dùng chung được tái sử dụng tại cả 3 trang (trang chủ, danh sách, và chi tiết) để tối ưu tỷ lệ chuyển đổi và loại bỏ code trùng lặp (DRY).
+*   `Pagination` (`src/components/Pagination.tsx`): Điều hướng phân trang, tự động cuộn lên đầu danh sách bài viết khi chuyển trang.
 
 
 ---
