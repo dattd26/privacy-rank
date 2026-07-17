@@ -11,11 +11,10 @@ Dự án **PrivacyRank** là một nền tảng xếp hạng và đánh giá VPN
 
 ## 1. Kết quả Nghiên cứu UI/UX (UI Research)
 
-Tôi đã phân tích sâu các tài liệu phong cách thiết kế và trải nghiệm người dùng hàng đầu từ các thương hiệu uy tín: **NEVERHACK**, **ExpressVPN**, và **SafetyDetectives**.
+Tôi đã phân tích sâu các tài liệu phong cách thiết kế và trải nghiệm người dùng hàng đầu từ các thương hiệu uy tín: **NEVERHACK** và **SafetyDetectives**.
 
-*   **[NEVERHACK](https://neverhack.com/) (Sovereign Cybersecurity)**: Bố cục được chia bằng các đường kẻ mảnh thay vì dùng nhiều card có bóng đổ, kết hợp với font sans-serif đơn giản để tạo cảm giác hiện đại và chuyên nghiệp.
-*   **[ExpressVPN](https://www.expressvpn.com/) (Spacious Authority)**: Tham khảo cách sắp xếp thông tin so sánh VPN rõ ràng và dễ theo dõi. Bảng xếp hạng được trình bày trực quan, kết hợp các mục ưu điểm/nhược điểm (Pros & Cons), giá khuyến mãi và nhãn như "Editor's Choice", giúp người dùng nhanh chóng so sánh và lựa chọn VPN phù hợp.
-*   **[SafetyDetectives](https://www.safetydetectives.com/) (Audited Knowledge & Rich Readability)**: Nghiên cứu cách tổ chức hệ thống bài viết đánh giá chi tiết (Reviews Blog) chuẩn SEO. Đặc trưng bởi cấu trúc layout 2 cột khoa học: Cột chính rộng tập trung vào nội dung đọc có tính thuyết phục cao; cột phụ (Sticky Sidebar) chứa tóm tắt thông số kỹ thuật nhanh (Quick Specs) cùng mục lục liên kết nhanh(giúp di chuyển giữa các phần trong trang) giúp người đọc không bị lạc lối. Sử dụng cỡ chữ lớn dễ đọc (base 17px, line-height 27.2px) và các khối Ưu điểm và Nhược điểm trực quan màu sắc, FAQ Accordion tương tác.
+*   **[NEVERHACK](https://neverhack.com/)**: Bố cục tối giản được phân chia bằng các đường kẻ hairline mảnh (1px) thay vì lạm dụng quá nhiều thẻ card đổ bóng phức tạp, kết hợp với font chữ sans-serif tinh gọn tạo ra giao diện mang hơi hướng công nghệ bảo mật cao cấp, minh bạch và chuyên nghiệp.
+*   **[SafetyDetectives](https://www.safetydetectives.com/)**: Nghiên cứu cách tổ chức thông tin bảng so sánh VPN trực quan và hệ thống bài viết đánh giá chi tiết (Reviews Blog) chuẩn SEO. Tích hợp các mục Ưu/Nhược điểm (Pros & Cons) phân biệt bằng màu sắc, bảng thông số kỹ thuật (Specs Table), nhãn xếp hạng "Editor's Choice" (tạo cảm giac tin cậy cho người dùng) và thiết kế layout 2 cột (Cột chính bên trái cho bài viết chính, cột Sidebar bên phải cố định khi cuộn chứa Quick Specs và mục lục liên kết nhanh). Sử dụng cỡ chữ lớn dễ đọc (base 17px, line-height 27.2px) và FAQ Accordion tương tác.
 
 **Quyết định áp dụng cho PrivacyRank**:
 *   Xây dựng giao diện lai hợp giữa **Top VPN Services** (Thân thiện, hiện đại) và **Security Lab** (Kỹ thuật, minh bạch).
@@ -76,7 +75,7 @@ Chi tiết thiết kế được ghi nhận tại [docs/design.md](file:///d:/CN
 
 ### 3.3. Bạn lấy cảm hứng từ những nguồn nào?
 *   *NEVERHACK*: Cảm hứng về bố cục bất đối xứng, đường kẻ mỏng chia cắt không gian, và sự tiết chế tối đa việc đổ bóng card.
-*   *ExpressVPN*: Thông tin so sánh VPN, cách trình bày điểm tốt/điểm không tốt của các VPN và việc thiết lập nhãn "Editor's Choice" tạo sự tin cậy.
+*   *SafetyDetectives*: Thông tin so sánh VPN, cách trình bày điểm tốt/điểm không tốt của các VPN và việc thiết lập nhãn "Editor's Choice" tạo sự tin cậy.
 
 ### 3.4. Nếu có thêm thời gian, bạn sẽ cải thiện gì?
 *   **Deep-dive Comparison**: Triển khai thêm trang so sánh chi tiết, cho phép người dùng tick chọn 2-3 VPN và hiển thị một bảng so sánh kỹ thuật kéo dài (gồm loại server, giao thức mã hóa cụ thể, hỗ trợ thanh toán crypto, v.v.).
